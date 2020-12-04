@@ -1,0 +1,9 @@
+.fa-shopping-cart {
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.fa-shopping-cart:hover {
+    opacity: 0.7;
+}
