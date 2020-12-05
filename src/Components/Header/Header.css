@@ -1,0 +1,25 @@
+#presentacion {
+    width: 100%; 
+    border-bottom: 1px solid rgb(22, 81, 119);
+    padding-bottom: 100px;
+    background: rgb(22, 81, 117);
+    color: white;
+}
+
+#libreria {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 100px; 
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+h2 { 
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Balsamiq Sans', cursive;
+}
