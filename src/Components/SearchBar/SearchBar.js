@@ -5,6 +5,7 @@ function SearchBar(){
     return(
         <div className="container">
             <input type="text" className="search-bar"/>
+            <button id="buscar">Buscar</button>
         </div>
     )
 }
