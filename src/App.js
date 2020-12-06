@@ -12,10 +12,10 @@ function App() {
     <NavBar />
     </>
     <div>
-      <SearchBar />
+      <Header />
     </div>
     <div>
-      <Header />
+      <SearchBar />
     </div>
     <div>
       <ItemListContainer />
