@@ -3,7 +3,7 @@ import './cartWidget.css';
 
 function CartWidget(){
     return(
-        <i class="fas fa-shopping-cart"></i>
+        <i className="fas fa-shopping-cart"></i>
     )
 }
 
