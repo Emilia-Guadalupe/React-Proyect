@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import SearchBar from './Components/SearchBar/SearchBar';
-import './App.css';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemCount from './Counter'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
     </div>
     <div>
       <ItemListContainer />
+    </div>
+    <>
+      <ItemCount/>
+    </>
+    <div>
+      <Footer />
     </div>
     </div>
   );
