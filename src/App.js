@@ -23,7 +23,7 @@ function App() {
       <ItemListContainer />
     </div>
     <>
-      <ItemCount/>
+      <ItemCount stock="9" initial="1"/>
     </>
     <div>
       <Footer />
