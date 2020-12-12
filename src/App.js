@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar/NavBar';
 import SearchBar from './Components/SearchBar/SearchBar';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemCount from './Counter'
+import ItemCount from './Components/ItemCount/ItemCount';
 import Footer from './Components/Footer/Footer';
 
 function App() {
