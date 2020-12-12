@@ -1,0 +1,55 @@
+#container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+#secondContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.button {
+    border-radius: 5px;
+    border: 1px solid rgb(22, 81, 117);
+    background-color: rgb(22, 81, 117);
+    color: white;
+}
+
+#left {
+    font-size: 22px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#right {
+    font-size: 18px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+#quantity {
+    font-size: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 4px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#cart {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(22, 81, 117);
+    color: white;
+    border-color: rgb(22, 81, 117);
+}
+
+#cart:hover {
+    border: 2px solid  rgb(49, 148, 209);
+    color:  white;
+    background-color: rgb(75, 186, 255);
+}
+
