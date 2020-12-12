@@ -1,7 +1,7 @@
 import React from 'react';
 
-function ItemCount({stock, initial}){
-    const [numero, setNumero] = React.useState(0);
+function ItemCount({stock}){
+    const [numero, setNumero] = React.useState(1);
 
     function sumar(){
         setNumero(numero + 1);
