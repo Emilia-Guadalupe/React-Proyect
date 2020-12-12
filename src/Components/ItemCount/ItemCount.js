@@ -6,33 +6,36 @@ function ItemCount(){
     const [number, setNumber] = React.useState(initial);
     const [stock] = useState(10); 
     const [limit] = useState(0);
+    const [empty, setEmpty] = useState("");
 
 
-    function more(){
-        if(number < stock){
-            
-        setNumber(number + 1);
-        return;
+function More(){
+    if(number < stock){ 
+    setNumber(number + 1);
+    return;
+    } if(stock === 0){
+        setEmpty("¡Nos quedamos sin stock!")
     }
 }
 
-    function less(){
-        if(number > limit){
-        setNumber(number - 1);
-        return;
+function Less(){
+    if(number > limit){
+    setNumber(number - 1);
+    return;
     }
 }
 
     return(
         <>
         <div id="container">
-            <button id="left" className="button" onClick={less}>-</button>
+            <button id="left" className="button" onClick={Less}>-</button>
             <p id="quantity">{number}</p>
-            <button id="right" className="button" onClick={more}>+</button>
+            <button id="right" className="button" onClick={More}>+</button>
         </div>
         <div id="secondContainer">
             <button id="cart">Agregar al Carrito</button>
         </div>
+        <div className="empty">{empty}</div>
         </>
     )
 }
