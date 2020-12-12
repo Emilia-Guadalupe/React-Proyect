@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './itemCount.css';
 
 function ItemCount(){
-    const initial = 0;
+    const initial = 1;
     const [number, setNumber] = React.useState(initial);
     const [stock] = useState(10); 
     const [limit] = useState(0);
