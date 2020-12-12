@@ -18,6 +18,7 @@ function ItemCount(){
     function less(){
         if(number > limit){
         setNumber(number - 1);
+        return;
     }
 }
 
