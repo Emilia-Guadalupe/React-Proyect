@@ -15,7 +15,7 @@ function more(){
     return;
     } if(stock === 0){
         setEmpty("¡Nos quedamos sin stock!")
-    }
+    } 
 }
 
 function less(){
