@@ -8,9 +8,6 @@ const ItemListContainer = () => {
     return (
     <div id="contenedor"> 
         <ItemList />
-        <>
-        <ItemCount />
-        </>
     </div>  
     )
 }
