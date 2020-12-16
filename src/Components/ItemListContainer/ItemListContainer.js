@@ -1,10 +1,16 @@
 import React from 'react';
-import './ItemListContainer.css';
+//import './ItemListContainer.css';
+import ItemList from '../ItemDetails/ItemList';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemListContainer = ({greetings = 'Muy pronto, todas nuestras novedades'}) => {
+
+const ItemListContainer = () => {
     return (
     <div id="contenedor"> 
-    <p className="hi">¡Hola! {greetings}</p>
+        <ItemList />
+        <>
+        <ItemCount />
+        </>
     </div>  
     )
 }
