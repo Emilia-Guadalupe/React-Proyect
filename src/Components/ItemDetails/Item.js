@@ -3,8 +3,8 @@ export const ItemDetails = [
         "id": 0,
         "title": "The Lost Hero",
         "author": "Rick Riordan",
-        "price": 7840,
-        "img": "The_Lost_Hero.jpg",
+        "price": 890,
+        "img": require('./Imagenes/The_Lost_Hero.jpg'),
         "language": "Inglés",
         "publisher": "Disney-Hyperion"
     },
@@ -13,8 +13,8 @@ export const ItemDetails = [
         "id": 1,
         "title": "Mistborn",
         "author": "Brandon Sanderson",
-        "price": 5080,
-        "img": "Mistborn_Trilogy.jpg",
+        "price": 800,
+        "img": require('./Imagenes/Mistborn_Trilogy.jpg'),
         "language": "Inglés",
         "publisher": "Tor Books"
     },
@@ -23,8 +23,8 @@ export const ItemDetails = [
         "id": 2,
         "title": "Stormfront",
         "author": "Jim Butcher",
-        "price": 4700,
-        "img": "Storm_Front.jpg",
+        "price": 700,
+        "img": require('./Imagenes/Storm_Front.jpg'),
         "language": "Inglés",
         "publisher": "Penguin Books"
     },
@@ -33,8 +33,8 @@ export const ItemDetails = [
         "id": 3,
         "title": "Inkheart",
         "author": "Cornelia Funke",
-        "price": 5000,
-        "img": "Inkheart.jpg",
+        "price": 900,
+        "img": require('./Imagenes/Inkheart.jpg'),
         "language": "Inglés",
         "publisher": "Scholastic"
     },
@@ -43,8 +43,8 @@ export const ItemDetails = [
         "id": 4,
         "title": "Six of Crows",
         "author": "Leigh Bardugo",
-        "price": 6000,
-        "img": "Six_of_Crows.jpg",
+        "price": 1000,
+        "img": require('./Imagenes/Six_Of_Crows.jpg'),
         "language": "Inglés",
         "publisher": "Henry Holt and Co"
     },
@@ -53,8 +53,8 @@ export const ItemDetails = [
         "id": 5,
         "title": "The Raven Boys",
         "author": "Maggie Stiefvater",
-        "price": 6000,
-        "img": "The_Raven_Cycle.jpg",
+        "price": 750,
+        "img": require('./Imagenes/The_Raven_Cycle.jpg'),
         "language": "Inglés",
         "publisher": "Scholastic"
     }
