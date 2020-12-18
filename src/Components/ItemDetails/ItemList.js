@@ -1,13 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { ItemDetails } from './Item';
 import './ItemList.css';
 
+
 function ItemList(){
+    const [product, setItem] = useState([ItemDetails]);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setItem([product])
+        }, 4000);
+
+        return() => clearTimeout(timeout)
+    },[product])
+
     return(
         <>
-            {ItemDetails.map((item) => {
+            {product.map((item, index) => {
                 return(
-                        <div key={item.id} id="itemContainer">
+                        <div key={index} id="itemContainer">
                                 <div>
                                 <img src={item.img} alt="Portada" />
                                 </div>
