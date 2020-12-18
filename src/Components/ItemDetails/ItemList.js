@@ -4,21 +4,25 @@ import './ItemList.css';
 
 
 function ItemList(){
-    const [product, setItem] = useState([ItemDetails]);
+    const [product, setItem] = useState([]);
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setItem([product])
-        }, 4000);
+useEffect(() => {
+    setTimeout(() => {
+        const promise = new Promise((resolve, reject) => {
+            resolve(ItemDetails);
+        });
+        promise.then(ItemDetails => {
+            setItem(ItemDetails);
+        })
+    }, 4000);
+},[])
 
-        return() => clearTimeout(timeout)
-    },[product])
 
     return(
         <>
-            {product.map((item, index) => {
+            {product.map((item) => {
                 return(
-                        <div key={index} id="itemContainer">
+                        <div key={item.id} id="itemContainer">
                                 <div>
                                 <img src={item.img} alt="Portada" />
                                 </div>
