@@ -1,10 +1,5 @@
 #contenedor {
-    height: 500px;
-}
-
-.hi {
-    text-align: center;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Balsamiq Sans', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
 }
