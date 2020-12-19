@@ -5,7 +5,7 @@ function ItemCount(){
     const initial = 1;
     const [number, setNumber] = React.useState(initial);
     const stock = 10; 
-    const limit = 0;
+    const limit = 1;
     const [empty, setEmpty] = useState("");
 
 
