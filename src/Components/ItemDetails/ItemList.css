@@ -1,0 +1,16 @@
+#book {
+    display: flex;
+    justify-content: center;
+}
+
+#portada {
+    height: 200px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.description {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    text-align: center;
+}
