@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { ItemDetails } from './Item';
 import './ItemList.css';
+import ItemCount from '../ItemCount/ItemCount';
+
 
 
 function ItemList(){
@@ -23,13 +25,16 @@ useEffect(() => {
             {product.map((item) => {
                 return(
                         <div key={item.id} id="itemContainer">
-                                <div>
-                                <img src={item.img} alt="Portada" />
+                                <div id="book">
+                                <img id="portada" src= {item.img} alt="Portada" />
                                 </div>
                                 <div>
-                                <h2>{item.title}</h2>
-                                <p>{item.author}</p>
-                                <p>{item.price}</p>
+                                <h2 className="description">{item.title}</h2>
+                                <p className="description">{item.author}</p>
+                                <p className="description">${item.price}</p>
+                                </div>
+                                <div>
+                                <ItemCount />
                                 </div>
                         </div>
                 )
@@ -38,6 +43,7 @@ useEffect(() => {
         </>
     )
 }
+
 
 export default ItemList;
 
