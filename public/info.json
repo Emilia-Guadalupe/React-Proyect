@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "title": "The Lost Hero",
+        "author": "Rick Riordan",
+        "price": 890,
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/The_Lost_Hero_210.jpg/220px-The_Lost_Hero_210.jpg",
+        "language" : "Inglés",
+        "publisher": "Disney-Hyperion",
+        "year": 2010,
+        "pages": 557
+    },
+    
+    {
+        "id": 1,
+        "title": "Mistborn",
+        "author": "Brandon Sanderson",
+        "price": 800,
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Mistborn-cover.jpg/220px-Mistborn-cover.jpg",
+        "language": "Inglés",
+        "publisher": "Tor Books",
+        "year": 2006,
+        "pages": 541
+    },
+    
+    {
+        "id": 2,
+        "title": "Stormfront",
+        "author": "Jim Butcher",
+        "price": 700,
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/Storm_Front.png",
+        "language": "Inglés",
+        "publisher": "Penguin Books",
+        "year": 2000,
+        "pages": 322
+    },
+    
+    {
+        "id": 3,
+        "title": "Inkheart",
+        "author": "Cornelia Funke",
+        "price": 900,
+        "img": "https://corneliafunke.com/phpThumb/phpThumb.php?src=/content/buecher/51/cover_en.png&w=140&f=png&sia=inkheart",
+        "language": "Inglés",
+        "publisher": "Scholastic",
+        "year": 2005,
+        "pages": 534
+    },
+    
+    {
+        "id": 4,
+        "title": "Six of Crows",
+        "author": "Leigh Bardugo",
+        "price": 1000,
+        "img": "https://www.leighbardugo.com/wp-content/uploads/2018/04/six-crows.jpg",
+        "language": "Inglés",
+        "publisher": "Henry Holt and Co",
+        "year": 2015,
+        "pages": 465
+    },
+    
+    {
+        "id": 5,
+        "title": "The Raven Boys",
+        "author": "Maggie Stiefvater",
+        "price": 750,
+        "img": "http://www.maggiestiefvater.com/wp-content/themes/maggiestiefvater%20-%20pods%202.0/images/raven-cycle/ravenboys-cover.jpg",
+        "language": "Inglés",
+        "publisher": "Scholastic",
+        "year": 2012,
+        "pages": 409
+    }
+]
