@@ -1,0 +1,31 @@
+#itemDetailContainer {
+    display: flex;    
+    margin: 30px;
+}
+
+#bookPart {
+    padding: 10px;
+    margin: 15px;
+}
+
+#content {
+    padding: 10px;
+    margin: 15px;
+}
+
+#bookContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#bookCover {
+    height: 200px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.details {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    text-align: center;
+}
