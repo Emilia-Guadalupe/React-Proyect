@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ItemDetails } from './Item';
+import { productDetails } from './Item';
 import './ItemList.css';
 import ItemCount from '../ItemCount/ItemCount';
 
@@ -14,10 +14,10 @@ function ItemList(){
 useEffect(() => {
     setTimeout(() => {
         const promise = new Promise((resolve, reject) => {
-            resolve(ItemDetails);
+            resolve(productDetails);
         });
-        promise.then(ItemDetails => {
-            setItem(ItemDetails);
+        promise.then(productDetails => {
+            setItem(productDetails);
         })
     }, 4000);
 },[])
