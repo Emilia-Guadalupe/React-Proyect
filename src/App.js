@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import Header from './Components/Header/Header';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Footer from './Components/Footer/Footer';
+import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
     </div>
     <div>
       <ItemListContainer />
+    </div>
+    <div>
+      <ItemDetailContainer />
     </div>
     <div>
       <Footer />
