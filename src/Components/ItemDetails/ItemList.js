@@ -8,6 +8,9 @@ import ItemCount from '../ItemCount/ItemCount';
 function ItemList(){
     const [product, setItem] = useState([]);
 
+//useEffect con un setTimeout, agregado para simular un retraso de 4 segundos en mostrar los productos
+//En resolve() se agrega lo que se quiere traer, en este caso, el array con los detalles de los productos. Una vez que eso está resuelto, en el .then se incluye setItem, para que la constante product tome el valor del array ItemDetails. Eso después se muestra en pantalla con un .map. 
+
 useEffect(() => {
     setTimeout(() => {
         const promise = new Promise((resolve, reject) => {
