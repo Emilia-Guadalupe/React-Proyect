@@ -1,5 +1,5 @@
 
-export const ItemDetails = [
+export const productDetails = [
     {
         id: 0,
         title: "The Lost Hero",
