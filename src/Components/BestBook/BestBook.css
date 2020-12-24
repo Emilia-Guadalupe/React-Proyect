@@ -1,0 +1,37 @@
+#bestBookContainer {
+    display: flex;    
+    justify-content: center;
+}
+
+#recomendation {
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    margin: 20px;
+}
+
+#bookDetails {
+    padding: 10px;
+    margin: 15px;
+}
+
+#contentBook {
+    padding: 10px;
+    margin: 15px;
+}
+
+#photoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#bookCoverPhoto {
+    height: 200px;
+    border-radius: 5px;
+}
+
+.information {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    text-align: center;
+}
