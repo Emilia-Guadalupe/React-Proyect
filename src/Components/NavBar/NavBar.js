@@ -8,7 +8,7 @@ class NavBar extends Component {
     render() {
         return(
             <nav className="NavBarItems">
-                <Link to="/home">
+                <Link to="/">
                 <h1 className="navbar-logo" id="titulo"><i className="fas fa-cloud"></i>En la Nube</h1>  
                 </Link>
             <ul className="nav-menu">
