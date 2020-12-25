@@ -13,7 +13,7 @@ function BestBook(){
             .then(response => {
                 setItem(response[4])
             })
-        }, 3000)
+        }, 1000)
     },[])
 
     return(
