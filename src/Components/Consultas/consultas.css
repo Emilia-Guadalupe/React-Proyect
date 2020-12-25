@@ -1,0 +1,12 @@
+#questionsContainer {
+    height: 500px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.questions {
+    padding: 15px;
+    text-align: justify;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 15px;
+}
