@@ -3,9 +3,26 @@
     margin: 30px;
 }
 
+.wholeContainer {
+    height: 500px;
+    margin: 50px;
+}
+
+#abstractTitle {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+}
+
+#abstractText {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    text-align: justify;
+}
+
 #bookPart {
     padding: 10px;
     margin: 15px;
+    justify-content: start;
 }
 
 #content {
