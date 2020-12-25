@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { productDetails } from './Item';
 import './ItemList.css';
 import ItemCount from '../ItemCount/ItemCount';
+import {NavLink} from 'react-router-dom';
 
 
 
@@ -29,7 +30,9 @@ useEffect(() => {
                 return(
                         <div key={item.id} id="itemContainer">
                                 <div id="book">
+                                <NavLink activeClassName="currentItem" to={`/itemDetailContainer`}>
                                 <img id="portada" src= {item.img} alt="Portada" />
+                                </NavLink>
                                 </div>
                                 <div>
                                 <h2 className="description">{item.title}</h2>
