@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { MenuItems } from './MenuItems';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 class NavBar extends Component {
     render() {
@@ -22,7 +22,9 @@ class NavBar extends Component {
                     )
                 })}
             </ul>
+            <NavLink to="/carrito" activeClassName="carrito">
             <CartWidget />
+            </NavLink>
             </nav>
         );
     }
