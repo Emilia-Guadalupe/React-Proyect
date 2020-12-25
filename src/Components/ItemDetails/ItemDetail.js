@@ -14,12 +14,13 @@ function ItemDetail(){
             .then(response => {
                 setItem(response[0])
             })
-        }, 3000)
+        }, 2000)
     },[])
 
     return(
     <div>
         {item ? (
+    <div className="wholeContainer">        
     <div id="itemDetailContainer">
         <div id="bookPart">
             <div id="bookContainer">
@@ -38,6 +39,11 @@ function ItemDetail(){
             <p className="details">Cant. Páginas: {item.pages}</p>
             <p className="details">Año de Publicación: {item.year}</p>
         </div>
+    </div>
+    <div className="abstractContainer">
+            <h4 id="abstractTitle">Resumen:</h4>
+            <p id="abstractText">{item.abstract}</p>
+    </div>
     </div>
         ) : (
         <p>Trayendo información desde base de datos...</p>
