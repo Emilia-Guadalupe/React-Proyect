@@ -1,0 +1,21 @@
+#aboutContainer {
+    height: 500px;
+    margin: 20px;
+    padding: 30px;
+}
+
+#library {
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#two {
+    padding: 15px;
+    text-align: justify;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#title {
+    padding-bottom: 15px;
+}
