@@ -20,7 +20,7 @@ useEffect(() => {
         promise.then(productDetails => {
             setItem(productDetails);
         })
-    }, 4000);
+    }, 1000);
 },[])
 
     return(
@@ -29,7 +29,7 @@ useEffect(() => {
                 return(
                         <div key={item.id} id="itemContainer">
                                 <div id="book">
-                                <Link to={`/itemDetail/${item.id}`}>
+                                <Link to={`/itemDetailContainer/${item.id}`}>
                                 <img id="portada" src= {item.img} alt="Portada" />
                                 </Link>
                                 </div>
