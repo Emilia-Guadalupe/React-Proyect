@@ -15,7 +15,6 @@ function ItemDetail(){
             })
             .then(response => {
                 setItem(response);
-                console.log(response)
             })
         }, 200)
     },[id])
