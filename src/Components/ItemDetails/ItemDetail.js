@@ -16,7 +16,7 @@ function ItemDetail(){
             promise.then(productDetails => {
                 setItem(productDetails);
             })
-        }, 100);
+        }, 500);
     },[id])
 
     return(
@@ -60,3 +60,4 @@ function ItemDetail(){
 }
 
 export default ItemDetail;
+
