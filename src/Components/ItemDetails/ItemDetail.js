@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail(){
     const [item, setItem] = useState([]);
+    const {id} = useParams();
 
     useEffect(() => {
         setTimeout(() =>{
@@ -12,16 +14,17 @@ function ItemDetail(){
                 return response.json()
             })
             .then(response => {
-                setItem(response[0])
+                setItem(response);
+                console.log(response)
             })
-        }, 2000)
-    },[])
+        }, 200)
+    },[id])
 
     return(
     <div>
         {item ? (
     <div className="wholeContainer">        
-    <div id="itemDetailContainer">
+    <div id="itemDetailContainer" key={item.id}>
         <div id="bookPart">
             <div id="bookContainer">
             <img id="bookCover" src= {item.img} alt="Portada" />
