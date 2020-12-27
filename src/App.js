@@ -24,10 +24,10 @@ function App() {
       <Route path="/libros">
       <Libros />
       </Route>
-      <Route path="/ItemDetailContainer">
+      <Route path="/ItemDetailContainer/:id">
       <ItemDetailContainer />
       </Route>
-      <Route exact path="/ItemDetail/:id">
+      <Route exact path="/ItemDetail">
       <ItemDetail />
       </Route>
       <Route path="/about">
