@@ -7,6 +7,7 @@ import Consultas from './Components/Consultas/Consultas';
 import Libros from './Components/ItemDisplay/ItemDisplay';
 import Footer from './Components/Footer/Footer';
 import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
+import ItemDetail from './Components/ItemDetails/ItemDetail';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -23,8 +24,11 @@ function App() {
       <Route path="/libros">
       <Libros />
       </Route>
-      <Route path="/itemDetailContainer">
+      <Route path="/ItemDetailContainer">
       <ItemDetailContainer />
+      </Route>
+      <Route exact path="/ItemDetail/:id">
+      <ItemDetail />
       </Route>
       <Route path="/about">
       <About />
