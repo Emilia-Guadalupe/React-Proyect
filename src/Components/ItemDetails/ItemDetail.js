@@ -24,7 +24,6 @@ function ItemDetail(){
         {item.length === 0 ?
             (<p>Cargando datos</p>)
             :item.map((e) => {
-                console.log(e.id)
                 return(
                     e.id === id ?
                     <div className="wholeContainer" key={e.id}>        
@@ -34,7 +33,7 @@ function ItemDetail(){
                 <img id="bookCover" src= {e.img} alt="Portada" />
                 </div>
                 <div>
-                <ItemCount />
+                <ItemCount details={{id: e.id}} />
                 </div>
             </div>
             <div id="content">
