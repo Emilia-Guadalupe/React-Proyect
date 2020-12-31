@@ -25,21 +25,21 @@ useEffect(() => {
 
     return(
         <>
-            {product.map((item) => {
+            {product.map((e) => {
                 return(
-                        <div key={item.id} id="itemContainer">
+                        <div key={e.id} id="itemContainer">
                                 <div id="book">
-                                <Link to={`/itemDetailContainer/${item.id}`}>
-                                <img id="portada" src= {item.img} alt="Portada" />
+                                <Link to={`/itemDetailContainer/${e.id}`}>
+                                <img id="portada" src= {e.img} alt="Portada" />
                                 </Link>
                                 </div>
                                 <div>
-                                <h2 className="description">{item.title}</h2>
-                                <p className="description">{item.author}</p>
-                                <p className="description">${item.price}</p>
+                                <h2 className="description">{e.title}</h2>
+                                <p className="description">{e.author}</p>
+                                <p className="description">${e.price}</p>
                                 </div>
                                 <div>
-                                <ItemCount />
+                                <ItemCount details={{id: e.id}}/>
                                 </div>
                         </div>
                 )
