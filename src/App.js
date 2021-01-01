@@ -8,6 +8,7 @@ import Libros from './Components/ItemDisplay/ItemDisplay';
 import Footer from './Components/Footer/Footer';
 import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 import ItemDetail from './Components/ItemDetails/ItemDetail';
+import CartContainer from './Components/CartContainer/CartContainer';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
       </Route>
       <Route path="/consultas">
       <Consultas />
+      </Route>
+      <Route path="/carrito">
+      <CartContainer />
       </Route>
     </Switch>
     <div>
