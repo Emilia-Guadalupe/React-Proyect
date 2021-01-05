@@ -2,19 +2,19 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './itemCount.css';
 
-function ItemCount({details: {id}}){
+function ItemCount({details: {id, stock}}){
     const initial = 1;
     const [number, setNumber] = React.useState(initial);
-    const stock = 10; 
+    const itemStock = stock; 
     const limit = 1;
     const [empty, setEmpty] = useState("");
     const [quantity, setQuantity] = useState();
 
 function more(){
-    if(number < stock){ 
+    if(number < itemStock){ 
     setNumber(number + 1);
     return;
-    } if(stock === 0){
+    } if(itemStock === 0){
         setEmpty("¡Nos quedamos sin stock!")
     } 
 }
