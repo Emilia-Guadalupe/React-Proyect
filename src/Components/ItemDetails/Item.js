@@ -53,7 +53,7 @@ export const productDetails = [
     },
     
     {
-        "id": 4,
+        "id": "4",
         "title": "Six of Crows",
         "author": "Leigh Bardugo",
         "price": 1000,
@@ -74,7 +74,7 @@ export const productDetails = [
         "language": "Inglés",
         "publisher": "Scholastic",
         "year": 2013,
-        "page": 409,
+        "pages": 409,
         abstract: "Cada año, la noche de San Marcos, Blue Sargent acompaña a su madre al camino de los espíritus para ver a los que morirán en los siguientes doce meses. Sin embargo, este año es distinto: Blue, la única de su familia que no tiene facultades adivinatorias, ha visto a uno de estos espíritus, y eso solo puede significar que es su amor verdadero o que lo va a matar. Él se llama Gansey y es el estudiante más rico del colegio privado más elitista de la zona, la Academia Aglionby, cuyo emblema es un cuervo que todos los estudiantes llevan bordado en el jersey. Junto a Adam, un estudiante brillante, celoso del poder económico de sus compañeros; Ronan, un chico con problemas emocionales desde la muerte de su padre, y Noah, el observador taciturno que apenas habla, forman los chicos del cuervo, y están empeñados en descubrir la ubicación de la tumba del último rey galés, Glendower, el Rey Cuervo."
     }
 ]
