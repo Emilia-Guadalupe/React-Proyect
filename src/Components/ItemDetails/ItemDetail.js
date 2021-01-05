@@ -33,7 +33,7 @@ function ItemDetail(){
                 <img id="bookCover" src= {e.img} alt="Portada" />
                 </div>
                 <div>
-                <ItemCount details={{id: e.id}} />
+                <ItemCount details={{id: e.id, stock: e.stock}} />
                 </div>
             </div>
             <div id="content">

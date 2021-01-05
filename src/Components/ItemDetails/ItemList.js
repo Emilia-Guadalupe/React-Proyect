@@ -39,7 +39,7 @@ useEffect(() => {
                                 <p className="description">${e.price}</p>
                                 </div>
                                 <div>
-                                <ItemCount details={{id: e.id}}/>
+                                <ItemCount details={{id: e.id, stock: e.stock}}/>
                                 </div>
                         </div>
                 )
