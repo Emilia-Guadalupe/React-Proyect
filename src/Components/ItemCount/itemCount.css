@@ -39,7 +39,7 @@
     font-family: 'Balsamiq Sans', cursive;
 }
 
-#cart {
+.cart {
     font-family: 'Balsamiq Sans', cursive;
     padding: 7px;
     border-radius: 5px;
@@ -61,7 +61,7 @@
     background-color: rgb(75, 186, 255);
 }
 
-#cart:hover {
+.cart:hover {
     border: 2px solid  rgb(49, 148, 209);
     color:  white;
     background-color: rgb(75, 186, 255);
