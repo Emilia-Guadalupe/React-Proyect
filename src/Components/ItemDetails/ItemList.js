@@ -29,7 +29,7 @@ useEffect(() => {
                 return(
                         <div key={e.id} id="itemContainer">
                                 <div id="book">
-                                <Link to={`/itemDetailContainer/${e.id}`}>
+                                <Link to={`/itemDetailContainer/${e.category}/${e.id}`}>
                                 <img id="portada" src= {e.img} alt="Portada" />
                                 </Link>
                                 </div>
