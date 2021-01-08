@@ -1,15 +1,24 @@
 import React from 'react';
 import './SearchBar.css'
+//import {Link} from 'react-router-dom';
 
 function SearchBar(){
     return(
+        <>
         <div className="container">
-            <input type="text" className="search-bar"/>
-            <button id="buscar">Buscar</button>
+        <input type="text" className="search-bar"/>
+        <button id="buscar">Buscar</button>
         </div>
+        </>
     )
 }
 
 export default SearchBar; 
 
-//Esta es una barra de búsqueda hecha con un input, que después va a ser reemplazada por un elemento real que pueda filtrar las búsquedas por término de los usuarios
+
+
+/*
+<div className="container">
+            
+        </div>
+*/
