@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import Toggle from './AddToCart';
 import './itemCount.css';
 
 function ItemCount({details: {id, stock}}){
@@ -8,7 +8,6 @@ function ItemCount({details: {id, stock}}){
     const itemStock = stock; 
     const limit = 1;
     const [empty, setEmpty] = useState("");
-    const [quantity, setQuantity] = useState();
 
 function more(){
     if(number < itemStock){ 
@@ -26,11 +25,6 @@ function less(){
     }
 }
 
-function add() {
-        setQuantity(number);
-        console.log(`El numero de productos es ${number} y el id es: ${id}`)
-}
-
     return(
         <>
         <div id="container">
@@ -39,9 +33,7 @@ function add() {
             <button id="right" className="button" onClick={more}>+</button>
         </div>
         <div id="secondContainer">
-            <Link to="/carrito">
-            <button id="cart" onClick={add}>Agregar al Carrito</button>
-            </Link>
+            <Toggle data={{number: number, id: id}} />
         </div>
         <div className="empty">{empty}</div>
         </>
