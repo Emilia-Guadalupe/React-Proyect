@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 import ItemDetail from './Components/ItemDetails/ItemDetail';
 import CartContainer from './Components/CartContainer/CartContainer';
+import ItemList from './Components/ItemDetails/ItemList';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -25,11 +26,14 @@ function App() {
       <Route path="/libros">
       <Libros />
       </Route>
-      <Route path="/ItemDetailContainer/:id">
+      <Route path="/ItemDetailContainer/:category/:id">
       <ItemDetailContainer />
       </Route>
       <Route exact path="/ItemDetail">
       <ItemDetail />
+      </Route>
+      <Route path="/ItemList/:category">
+      <ItemList />
       </Route>
       <Route path="/about">
       <About />
