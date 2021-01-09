@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Toggle from './AddToCart';
 import './itemCount.css';
 
-function ItemCount({details: {id, stock}}){
+function ItemCount({details: {id, stock, price, title}}){
     const initial = 1;
     const [number, setNumber] = React.useState(initial);
     const itemStock = stock; 
@@ -33,7 +33,7 @@ function less(){
             <button id="right" className="button" onClick={more}>+</button>
         </div>
         <div id="secondContainer">
-            <Toggle data={{number: number, id: id}} />
+            <Toggle data={{number: number, id: id, price, title}} />
         </div>
         <div className="empty">{empty}</div>
         </>
