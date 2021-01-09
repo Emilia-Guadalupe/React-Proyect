@@ -1,14 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext} from 'react';
+import ProductContext from '../Context/ProductContext';
 import { useParams } from 'react-router-dom';
-import { productDetails } from '../ItemDetails/Item';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail(){
-    const [item, setItem] = useState([]);
+    // Constante con la que se llamaba al array de productos al componente: 
+
+    //const [item, setItem] = useState([]);
+    
+    //Remplazada por una constante que llama a un Context que contiene el llamado al array de productos:
+    const producto = useContext(ProductContext);
+
+    //useParams para llamar a un único item del array de productos, por el id:
     const {id} = useParams();
 
-    useEffect(() => {
+    //UseEffect guardado de manera provisoria, era usado para llamar al array de productos al Componente, antes de reemplazarlo por un llamado al Context:
+
+    /*useEffect(() => {
         setTimeout(() => {
             const promise = new Promise((resolve, reject) => {
                 resolve(productDetails);
@@ -17,13 +26,15 @@ function ItemDetail(){
                 setItem(productDetails);
             })
         }, 500);
-    },[id])
+    },[id])*/
+
+    //Se mapean los productos del array, llamados desde el CartContext:
 
     return(
         <div>
-        {item.length === 0 ?
+        {producto.length === 0 ?
             (<p>Cargando datos</p>)
-            :item.map((e) => {
+            :producto.map((e) => {
                 return(
                     e.id === id ?
                     <div className="wholeContainer" key={e.id}>        
@@ -33,7 +44,7 @@ function ItemDetail(){
                 <img id="bookCover" src= {e.img} alt="Portada" />
                 </div>
                 <div>
-                <ItemCount details={{id: e.id, stock: e.stock}} />
+                <ItemCount details={{id: e.id, stock: e.stock, price: e.price, title: e.title}} />
                 </div>
             </div>
             <div id="content">
