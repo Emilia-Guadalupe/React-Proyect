@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
+import CartContext from '../Context/CartContext';
 import './itemCount.css';
 
-function Toggle({data: {id, number}}){
+function Toggle({data: {id, number, price, title}}){
     const [showing, setShowing] = useState(false);
-    const [quantity, setQuantity] = useState();
+    const {getIformationFromApp} = useContext(CartContext);
 
     function add() {
-        setQuantity(number);
+        setShowing({ showing: !showing })
         console.log(`El numero de productos es ${number} y el id es: ${id}`);
 }
 
@@ -15,8 +16,8 @@ function Toggle({data: {id, number}}){
     <>
     <div>
     { showing
-    ? <Link to="/carrito"><button className="cart" onClick={add}>Terminar Compra</button></Link>
-    : <button className="cart" onClick={() => setShowing({ showing: !showing })}>Agregar al Carrito</button>
+    ? <Link onClick={getIformationFromApp(id, number, price, title)} to="/carrito"><button className="cart">Terminar Compra</button></Link>
+    : <button className="cart" onClick={add}>Agregar al Carrito</button>
     }
     </div>
     </>
