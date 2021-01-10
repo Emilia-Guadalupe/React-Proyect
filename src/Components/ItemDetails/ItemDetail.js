@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail(){
-    // Constante con la que se llamaba al array de productos al componente: 
+    //Constante con la que se llamaba al array de productos al componente: 
 
     //const [item, setItem] = useState([]);
     
@@ -14,19 +14,6 @@ function ItemDetail(){
 
     //useParams para llamar a un único item del array de productos, por el id:
     const {id} = useParams();
-
-    //UseEffect guardado de manera provisoria, era usado para llamar al array de productos al Componente, antes de reemplazarlo por un llamado al Context:
-
-    /*useEffect(() => {
-        setTimeout(() => {
-            const promise = new Promise((resolve, reject) => {
-                resolve(productDetails);
-            });
-            promise.then(productDetails => {
-                setItem(productDetails);
-            })
-        }, 500);
-    },[id])*/
 
     //Se mapean los productos del array, llamados desde el CartContext:
 
