@@ -15,10 +15,3 @@ function SearchBar(){
 
 export default SearchBar; 
 
-
-
-/*
-<div className="container">
-            
-        </div>
-*/
