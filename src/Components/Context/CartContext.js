@@ -4,22 +4,14 @@ const CartContext = createContext();
 
 function CartContextProvider({children}){
     const [quantity, setQuantity] = useState();
-    let [productId, setProductId] = useState("no id");
+    let [productId, setProductId] = useState();
     let [productPrice, setPrice] = useState();
-    let [productTitle, setTitle] = useState("no title")
+    let [productTitle, setTitle] = useState()
 
-    const getIformationFromApp = (id, number, price, title) => {
-        setQuantity(number);
-        setProductId(id);
-        setPrice(price);
-        setTitle(title);
-    };
-
-    console.log(quantity, productId);
-
+    const datos = { quantity, productId, productPrice, productTitle } 
 
     return(
-        <CartContext.Provider value={{ quantity, setQuantity, getIformationFromApp, productId, productPrice, productTitle }}>
+        <CartContext.Provider value={{ quantity, setQuantity, productId, setProductId, setPrice, productPrice, productTitle, setTitle, datos }}>
             {children}
         </CartContext.Provider>
     )
