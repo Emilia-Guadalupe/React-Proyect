@@ -16,17 +16,6 @@ function ItemList(){
 
 //Ver en ItemDetails los comentarios respecto a los cambios aplicados, reemplazando los useEffect por un useContext, guardando el llamado a productos directamente en un Context para su uso en distintos componentes. Se deja este useEffect, ya sin uso, de manera provisoria: 
 
-/*useEffect(() => {
-    setTimeout(() => {
-        const promise = new Promise((resolve, reject) => {
-            resolve(productDetails);
-        });
-        promise.then(productDetails => {
-            setItem(productDetails);
-        })
-    }, 1000);
-},[])*/
-
     return(
         <>
             {producto.map((e) => {
