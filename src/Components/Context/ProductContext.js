@@ -7,7 +7,7 @@ import { productDetails } from '../ItemDetails/Item';
     //Función que le da su contenido al Contexto, en este caso es el Promise que llama al array de productos:
 
 function ProductContextProvider({children}) {
-    const [producto, setProducto] = useState([]);
+    const [product, setProduct] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,7 +15,7 @@ function ProductContextProvider({children}) {
                 resolve(productDetails);
             });
             promise.then(productDetails => {
-                setProducto(productDetails);
+                setProduct(productDetails);
             })
         }, 100);
     },[])
@@ -23,7 +23,7 @@ function ProductContextProvider({children}) {
     //Se llama a la constante CartContext y se le asigna un valor dentro de Provider. De esa manera, ese valor se puede llevar a todos los Componentes que lo necesiten. En este caso, se va a establecer a CartContextProvider como un elemento que va a englobar a toda la App, ya que lo usan Componentes de distintos niveles en la App y es útil que esté accesible para todos. 
 
     return(
-        <ProductContext.Provider value={producto}>
+        <ProductContext.Provider value={product}>
             {children}
         </ProductContext.Provider>
     )
