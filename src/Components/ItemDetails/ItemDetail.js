@@ -10,7 +10,7 @@ function ItemDetail(){
     //const [item, setItem] = useState([]);
     
     //Remplazada por una constante que llama a un Context que contiene el llamado al array de productos:
-    const producto = useContext(ProductContext);
+    const product = useContext(ProductContext);
 
     //useParams para llamar a un único item del array de productos, por el id:
     const {id} = useParams();
@@ -19,9 +19,9 @@ function ItemDetail(){
 
     return(
         <div>
-        {producto.length === 0 ?
+        {product.length === 0 ?
             (<p>Cargando datos</p>)
-            :producto.map((e) => {
+            :product.map((e) => {
                 return(
                     e.id === id ?
                     <div className="wholeContainer" key={e.id}>        
