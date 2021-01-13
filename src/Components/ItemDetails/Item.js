@@ -80,7 +80,7 @@ export const productDetails = [
         "title": "The Raven Boys",
         "author": "Maggie Stiefvater",
         "price": 750,
-        "img": 'http://www.maggiestiefvater.com/wp-content/themes/maggiestiefvater%20-%20pods%202.0/images/raven-cycle/ravenboys-cover.jpg',
+        "img": 'https://th.bing.com/th/id/OIP.yOStL5tTUk0G6H0TdywyVwHaKt?pid=Api&rs=1',
         "language": "Inglés",
         "publisher": "Scholastic",
         "year": 2013,
