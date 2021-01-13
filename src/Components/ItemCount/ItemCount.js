@@ -37,7 +37,7 @@ function less(){
 
 function add(){
     setShowing({ showing: !showing });
-    addProduct(product, number);
+    addProduct(product, number, id);
 }
 
     return(

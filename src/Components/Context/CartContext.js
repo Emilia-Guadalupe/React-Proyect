@@ -7,20 +7,24 @@ const CartContext = createContext();
 function CartContextProvider({children}){
     const [products, setProducts] = useState([]);
 
-    const addProduct = (product, number) => {
+    const addProduct = (product, number,id) => {
     
-    const existing = products.find((p) => p.id === product.id);
+    console.log(id)
+    console.log(number);
+    
+    const existing = products.find(product => product.id === id);
 
-    // Si existe
-    if (existing) {
-    // Crea un array nuevo
-    setProducts([...product]);
-    } else {
-      // Agrega uno nuevo y crea un array nuevo
-    setProducts([...products, { ...product, number }]);
-    }
+    console.log(existing);
 
+    setProducts([...products, { ...product, number }]);    
 
+       /* // Si existe
+        if (existing) {
+        setProducts([...product]);
+        } else {
+          // Agrega uno nuevo y crea un array nuevo
+        setProducts([...products, { ...product, number }]);
+        }*/
     };
 
     const delProduct = (id) => {
@@ -31,10 +35,12 @@ function CartContextProvider({children}){
         setProducts([...products]);
     };
 
-
+    const clearCart = () => {
+        setProducts([]);
+    }
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart  }}>
             {children}
         </CartContext.Provider>
     )
@@ -56,3 +62,21 @@ export {CartContextProvider};
         "price": productPrice, 
         "title": productTitle 
     }];*/
+
+    /*const [productId, setProductId] = useState();
+    const [productPrice, setPrice] = useState();
+    const [productTitle, setTitle] = useState();
+    const [quantity, setQuantity] = useState();
+
+    const dataProvider = [{ 
+        "quantity": quantity, 
+        "id": productId, 
+        "price": productPrice, 
+        "title": productTitle 
+    }];*/
+
+    //console.log(dataProvider);
+
+    /*function addItem(){
+        setProducts(products => [...product, dataProvider]);
+    }*/

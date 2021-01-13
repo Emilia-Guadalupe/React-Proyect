@@ -5,9 +5,7 @@ import './cartStyles.css';
 
 function CartContainer() {
 
-    const { products, delProduct } = useContext(CartContext);
-
-    console.log(products);
+    const { products, delProduct, clearCart } = useContext(CartContext);
 
     const handleDel = (p) => {
         delProduct(p.id);
@@ -20,19 +18,18 @@ function CartContainer() {
             <Link to="/">
             <button className="cartButton">Volver</button>
             </Link>
-            <button className="cartButton">Borrar todo</button>
+            <button className="cartButton" onClick={clearCart}>Borrar todo</button>
         </div>
 
         {products.map((product) => {
                 return(
-                    product.id ?
                     <div id="itemContainer">
                         <p className="cartText">Id de tu producto: {product.id}</p>
                         <p className="cartText">Cantidad: {product.number}</p>
                         <p className="cartText">Título: {product.title}</p>
                         <p className="cartText">Precio: ${product.price}</p>
                         <button onClick={() => handleDel(product)}>X</button>
-                    </div> : null
+                    </div> 
                 )
             })
             }
