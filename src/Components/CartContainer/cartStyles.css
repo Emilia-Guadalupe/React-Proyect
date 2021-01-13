@@ -17,6 +17,12 @@
     font-family: 'Balsamiq Sans', cursive;
 }
 
+.emptyCart {
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
 .cartText {
     padding: 5px;
 }
@@ -29,4 +35,12 @@
     font-family: 'Balsamiq Sans', cursive;
     padding: 5px;
     margin: 10px;
+}
+
+.deleteButton {
+    border-radius: 5px;
+    border: 1px solid rgb(22, 81, 117);
+    background-color: rgb(22, 81, 117);
+    color: white;
+    font-family: 'Balsamiq Sans', cursive;
 }
