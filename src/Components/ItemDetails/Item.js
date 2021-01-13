@@ -90,3 +90,4 @@ export const productDetails = [
         "category": "Scholastic"
     }
 ]
+
