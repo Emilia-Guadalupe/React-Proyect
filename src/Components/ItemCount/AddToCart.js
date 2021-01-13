@@ -5,14 +5,20 @@ import './itemCount.css';
 
 function Toggle({data: {id, number, price, title}}){
     const [showing, setShowing] = useState(false);
-    const { setQuantity, setPrice, setTitle, setProductId } = useContext(CartContext);
+    const { setQuantity, setPrice, setTitle, setProductId, order, setOrder, dataProvider } = useContext(CartContext);
 
-    function add() {
+    function addItem(dataProvider){
+        const placeOrder = [...order, dataProvider] 
+        setOrder(placeOrder);
+    }
+
+    function add(dataProvider) {
         setShowing({ showing: !showing });
         setQuantity(number);
         setPrice(price);
         setTitle(title);
         setProductId(id);
+        addItem(dataProvider)
     }
 
     return(
@@ -20,7 +26,7 @@ function Toggle({data: {id, number, price, title}}){
     <div>
     { showing
     ? <Link to="/carrito"><button className="cart">Terminar Compra</button></Link>
-    : <button className="cart" onClick={add}>Agregar al Carrito</button>
+    : <button className="cart" onClick={add(dataProvider)}>Agregar al Carrito</button>
     }
     </div>
     </>
