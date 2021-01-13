@@ -9,6 +9,7 @@ function CartContextProvider({children}){
 
     const addProduct = (product, number,id) => {
     
+    console.log(product)
     console.log(id)
     console.log(number);
     
