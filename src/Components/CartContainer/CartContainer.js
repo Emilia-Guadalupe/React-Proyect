@@ -4,32 +4,47 @@ import {Link} from 'react-router-dom';
 import './cartStyles.css';
 
 function CartContainer() {
-    const { quantity, productId, productPrice, productTitle, datos } = useContext(CartContext);
 
-    console.log(datos);
+    const { products, delProduct } = useContext(CartContext);
+
+    console.log(products);
+
+    const handleDel = (p) => {
+        delProduct(p.id);
+    };
 
     return(
         <>
-        <div className="wholeCart">
-        <div className="titleContainer">
-            <h3>Tu carrito de compras: </h3>
-        </div>
-        <div className="dataContainer">
-            <p className="cartText">Id de tu producto: {productId}</p>
-            <p className="cartText">Cantidad: {quantity}</p>
-            <p className="cartText">Título: {productTitle}</p>
-            <p className="cartText">Precio: ${productPrice}</p>
-            <button>X</button>
-        </div>
+        <div>
         <div className="buttonBack">
-        <Link to="/">
+            <Link to="/">
             <button className="cartButton">Volver</button>
-        </Link>
+            </Link>
             <button className="cartButton">Borrar todo</button>
         </div>
+
+        {products.map((product) => {
+                return(
+                    product.id ?
+                    <div id="itemContainer">
+                        <p className="cartText">Id de tu producto: {product.id}</p>
+                        <p className="cartText">Cantidad: {product.number}</p>
+                        <p className="cartText">Título: {product.title}</p>
+                        <p className="cartText">Precio: ${product.price}</p>
+                        <button onClick={() => handleDel(product)}>X</button>
+                    </div> : null
+                )
+            })
+            }
+        </div>
+        <div>
+        <h5>Total:</h5>
+        <h5>Ejemplo</h5>
         </div>
         </>
     )
 }
 
 export default CartContainer; 
+
+//    const { order } = useContext(CartContext);
