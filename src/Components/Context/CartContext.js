@@ -50,6 +50,9 @@ function CartContextProvider({children}){
 export default CartContext;
 export {CartContextProvider};
 
+
+//Pruebas varias ---
+
 /*const [number, setnumber] = useState();
     const [productId, setProductId] = useState();
     const [productPrice, setPrice] = useState();
