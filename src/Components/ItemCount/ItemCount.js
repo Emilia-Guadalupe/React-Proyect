@@ -1,7 +1,6 @@
 import React, {useState, useContext} from 'react';
 //import Toggle from './AddToCart';
 import CartContext from '../Context/CartContext';
-import ProductContext from '../Context/ProductContext';
 import {Link} from 'react-router-dom';
 import './itemCount.css';
 
@@ -17,7 +16,7 @@ function ItemCount({details: {id, stock, price, title}}){
     //Funciones y elementos del Context:
     
     const { addProduct } = useContext(CartContext);
-    const product = useContext(ProductContext);
+    const datos = {id, stock, price, title} 
 
 function more(){
     if(number < itemStock){ 
@@ -37,7 +36,7 @@ function less(){
 
 function add(){
     setShowing({ showing: !showing });
-    addProduct(product, number, id);
+    addProduct(datos, number);
 }
 
     return(

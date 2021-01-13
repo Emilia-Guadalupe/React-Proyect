@@ -1,23 +1,17 @@
-import React, {createContext, useState, useContext} from 'react';
-//import ProductContext from '../Context/ProductContext';
-
+import React, {createContext, useState} from 'react';
 
 const CartContext = createContext();
 
 function CartContextProvider({children}){
     const [products, setProducts] = useState([]);
 
-    const addProduct = (product, number,id) => {
-
-    console.log(id)
-    console.log(number);
-    console.log(product)
+    const addProduct = (datos, number) => {
     
-    const existing = product.find(products => products.id === id);
+    //const existing = product.find(products => products.id === id);
 
-    console.log(existing);
+    //console.log(existing);
 
-    setProducts([...products, { ...product, number }]);    
+    setProducts([...products, { ...datos, number }]);    
 
        /* // Si existe
         if (existing) {
@@ -40,6 +34,7 @@ function CartContextProvider({children}){
         setProducts([]);
     }
 
+
     return(
         <CartContext.Provider value={{ products, addProduct, delProduct, clearCart  }}>
             {children}
@@ -50,37 +45,3 @@ function CartContextProvider({children}){
 
 export default CartContext;
 export {CartContextProvider};
-
-
-//Pruebas varias ---
-
-/*const [number, setnumber] = useState();
-    const [productId, setProductId] = useState();
-    const [productPrice, setPrice] = useState();
-    const [productTitle, setTitle] = useState();
-    const [order, setOrder] = useState([]); 
-
-    const dataProvider = [{ 
-        "number": number, 
-        "id": productId, 
-        "price": productPrice, 
-        "title": productTitle 
-    }];*/
-
-    /*const [productId, setProductId] = useState();
-    const [productPrice, setPrice] = useState();
-    const [productTitle, setTitle] = useState();
-    const [quantity, setQuantity] = useState();
-
-    const dataProvider = [{ 
-        "quantity": quantity, 
-        "id": productId, 
-        "price": productPrice, 
-        "title": productTitle 
-    }];*/
-
-    //console.log(dataProvider);
-
-    /*function addItem(){
-        setProducts(products => [...product, dataProvider]);
-    }*/

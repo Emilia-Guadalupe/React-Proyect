@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import CartContext from '../Context/CartContext';
 import {Link} from 'react-router-dom';
 import './cartStyles.css';
@@ -13,30 +13,31 @@ function CartContainer() {
 
     return(
         <>
-        <div>
-        <div className="buttonBack">
-            <Link to="/">
-            <button className="cartButton">Volver</button>
-            </Link>
-            <button className="cartButton" onClick={clearCart}>Borrar todo</button>
-        </div>
-
-        {products.map((product) => {
+        <div className="wholeCart">
+        <div className="titleContainer"><h3>Tu carrito de Compras</h3></div>
+        {products.length === 0 ?
+            (<p className="emptyCart">Tu carrito está vacío :( </p>)
+            :products.map((product) => {
                 return(
-                    <div id="itemContainer">
+                    <div className="dataContainer" key={product.id}>
                         <p className="cartText">Id de tu producto: {product.id}</p>
                         <p className="cartText">Cantidad: {product.number}</p>
                         <p className="cartText">Título: {product.title}</p>
-                        <p className="cartText">Precio: ${product.price}</p>
-                        <button onClick={() => handleDel(product)}>X</button>
+                        <p className="cartText">Precio Total: ${product.price * product.number}</p>
+                        <button className="deleteButton" onClick={() => handleDel(product)}>X</button>
                     </div> 
                 )
             })
             }
         </div>
         <div>
-        <h5>Total:</h5>
-        <h5>Ejemplo</h5>
+            <p>Total: </p>
+        </div>
+        <div className="buttonBack">
+            <Link to="/">
+            <button className="cartButton">Volver</button>
+            </Link>
+            <button className="cartButton" onClick={clearCart}>Borrar todo</button>
         </div>
         </>
     )
@@ -44,4 +45,3 @@ function CartContainer() {
 
 export default CartContainer; 
 
-//    const { order } = useContext(CartContext);
