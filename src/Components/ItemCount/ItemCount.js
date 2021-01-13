@@ -1,13 +1,23 @@
-import React, {useState} from 'react';
-import Toggle from './AddToCart';
+import React, {useState, useContext} from 'react';
+//import Toggle from './AddToCart';
+import CartContext from '../Context/CartContext';
+import ProductContext from '../Context/ProductContext';
+import {Link} from 'react-router-dom';
 import './itemCount.css';
 
 function ItemCount({details: {id, stock, price, title}}){
+    //Funciones y elementos del Counter: 
     const initial = 1;
     const [number, setNumber] = React.useState(initial);
     const itemStock = stock; 
     const limit = 1;
     const [empty, setEmpty] = useState("");
+    const [showing, setShowing] = useState(false);
+
+    //Funciones y elementos del Context:
+    
+    const { addProduct } = useContext(CartContext);
+    const product = useContext(ProductContext);
 
 function more(){
     if(number < itemStock){ 
@@ -25,6 +35,11 @@ function less(){
     }
 }
 
+function add(){
+    setShowing({ showing: !showing });
+    addProduct(product, number);
+}
+
     return(
         <>
         <div id="container">
@@ -33,7 +48,10 @@ function less(){
             <button id="right" className="button" onClick={more}>+</button>
         </div>
         <div id="secondContainer">
-            <Toggle data={{number: number, id: id, price, title}} />
+    { showing
+    ? <Link to="/carrito"><button className="cart">Terminar Compra</button></Link>
+    : <button className="cart" onClick={add}>Agregar al Carrito</button>
+    }
         </div>
         <div className="empty">{empty}</div>
         </>
