@@ -8,12 +8,12 @@ function CartContextProvider({children}){
     const [products, setProducts] = useState([]);
 
     const addProduct = (product, number,id) => {
-    
-    console.log(product)
+
     console.log(id)
     console.log(number);
+    console.log(product)
     
-    const existing = products.find(product => product.id === id);
+    const existing = product.find(products => products.id === id);
 
     console.log(existing);
 

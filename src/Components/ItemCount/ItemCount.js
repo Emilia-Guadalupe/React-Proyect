@@ -35,7 +35,7 @@ function less(){
     }
 }
 
-function add(product, number, id){
+function add(){
     setShowing({ showing: !showing });
     addProduct(product, number, id);
 }
@@ -50,7 +50,7 @@ function add(product, number, id){
         <div id="secondContainer">
     { showing
     ? <Link to="/carrito"><button className="cart">Terminar Compra</button></Link>
-    : <button className="cart" onClick={() => add(product, number, id)}>Agregar al Carrito</button>
+    : <button className="cart" onClick={add}>Agregar al Carrito</button>
     }
         </div>
         <div className="empty">{empty}</div>
