@@ -8,10 +8,22 @@
     margin: 30px;
     font-family: 'Balsamiq Sans', cursive;
 }
+.CartContainer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.totals {
+    margin: 30px;
+    padding: 15px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 15px;
+    text-align: center;
+}
 
 .dataContainer {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     text-align: center;
     margin: 30px;
     font-family: 'Balsamiq Sans', cursive;

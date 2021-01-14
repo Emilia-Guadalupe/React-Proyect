@@ -1,7 +1,17 @@
+.cartPart {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
 .fa-shopping-cart {
     color: white;
     font-size: 25px;
-    padding-left: 10px;
+    padding-right: 7px;
 }
 
 .fa-shopping-cart:hover {
