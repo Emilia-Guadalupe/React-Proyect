@@ -19,10 +19,10 @@ function App() {
     <BrowserRouter>
     <ProductContextProvider>
     <div className="App">
+    <CartContextProvider>
     <>
       <NavBar />
     </>
-    <CartContextProvider>
     <Switch>
       <Route exact path="/">
       <Home />
