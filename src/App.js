@@ -10,8 +10,8 @@ import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 import ItemDetail from './Components/ItemDetails/ItemDetail';
 import CartContainer from './Components/CartContainer/CartContainer';
 import ItemList from './Components/ItemDetails/ItemList';
-import {ProductContextProvider} from './Components/Context/ProductContext';
-import  {CartContextProvider} from './Components/Context/CartContext';
+import {ProductContextProvider} from './Context/ProductContext';
+import  {CartContextProvider} from './Context/CartContext';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {

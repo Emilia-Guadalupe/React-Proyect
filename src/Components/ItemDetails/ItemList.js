@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import ProductContext from '../Context/ProductContext';
+import ProductContext from '../../Context/ProductContext';
 import './ItemList.css';
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';

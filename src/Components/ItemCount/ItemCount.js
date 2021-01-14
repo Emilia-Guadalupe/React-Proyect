@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 //import Toggle from './AddToCart';
-import CartContext from '../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 //import ProductContext from '../Context/ProductContext';
 import {Link} from 'react-router-dom';
 import './itemCount.css';
