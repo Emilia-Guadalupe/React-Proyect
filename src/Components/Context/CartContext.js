@@ -30,9 +30,16 @@ function CartContextProvider({children}){
         setProducts([]);
     }
 
+    const productsCount = () => {
+        return products.reduce((total, p) => (total += p.number), 0);
+    };
+    
+    const getGrandTotal = () => {
+        return products.reduce((total , p) => (total += p.price * p.number), 0);
+    };
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart  }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal  }}>
             {children}
         </CartContext.Provider>
     )

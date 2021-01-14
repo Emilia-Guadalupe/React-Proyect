@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './cartWidget.css';
+import CartContext from '../Context/CartContext';
 
 function CartWidget(){
+
+    const { productsCount } = useContext(CartContext);
+
     return(
-        <i className="fas fa-shopping-cart"></i>
+        <>
+        <div className="cartPart">
+        <span><i className="fas fa-shopping-cart"></i></span>
+        <p>{productsCount()}</p>
+        </div>
+        </>
     )
 }
 

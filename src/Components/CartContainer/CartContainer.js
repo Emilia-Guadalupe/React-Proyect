@@ -5,7 +5,7 @@ import './cartStyles.css';
 
 function CartContainer() {
 
-    const { products, delProduct, clearCart } = useContext(CartContext);
+    const { products, delProduct, clearCart, getGrandTotal, productsCount } = useContext(CartContext);
 
     const handleDel = (p) => {
         delProduct(p.id);
@@ -13,6 +13,7 @@ function CartContainer() {
 
     return(
         <>
+        <div className="CartContainer">
         <div className="wholeCart">
         <div className="buttonBack">
             <Link to="/">
@@ -34,15 +35,20 @@ function CartContainer() {
                         <p className="cartText">Id de tu producto: {product.id}</p>
                         <p className="cartText">Cantidad: {product.number}</p>
                         <p className="cartText">Título: {product.title}</p>
-                        <p className="cartText">Precio Total: ${product.price}</p>
+                        <p className="cartText">Precio por unidad: ${product.price}</p>
+                        <p className="cartText">Precio Total: ${product.price * product.number}</p>
                         <button className="deleteButton" onClick={() => handleDel(product)}>X</button>
                     </div> 
                 )
             })
             }
         </div>
-        <div>
-            <p>Total: </p>
+        <div className="totals">
+            <p>Cantidad de Productos:</p>
+            <p>{productsCount()}</p>
+            <p>Total Compra:</p>
+            <p>${getGrandTotal()}</p>
+        </div>
         </div>
         </>
     )
