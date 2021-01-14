@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 //import Toggle from './AddToCart';
 import CartContext from '../Context/CartContext';
+//import ProductContext from '../Context/ProductContext';
 import {Link} from 'react-router-dom';
 import './itemCount.css';
 
@@ -17,6 +18,8 @@ function ItemCount({details: {id, stock, price, title}}){
     
     const { addProduct } = useContext(CartContext);
     const datos = {id, stock, price, title} 
+    //const product = useContext(ProductContext);
+
 
 function more(){
     if(number < itemStock){ 

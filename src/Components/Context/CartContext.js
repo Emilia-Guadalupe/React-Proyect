@@ -7,19 +7,15 @@ function CartContextProvider({children}){
 
     const addProduct = (datos, number) => {
     
-    //const existing = product.find(products => products.id === id);
+    const existing = products.find((p) => p.id === datos.id);
 
-    //console.log(existing);
-
-    setProducts([...products, { ...datos, number }]);    
-
-       /* // Si existe
-        if (existing) {
-        setProducts([...product]);
+    if (existing) {
+        // Sumo al existente
+        existing.number += number;
+        // Crea un array nuevo
         } else {
-          // Agrega uno nuevo y crea un array nuevo
-        setProducts([...products, { ...product, number }]);
-        }*/
+        setProducts([...products, { ...datos, number }]);    
+        }
     };
 
     const delProduct = (id) => {
