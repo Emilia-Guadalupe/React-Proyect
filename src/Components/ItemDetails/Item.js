@@ -88,6 +88,36 @@ export const productDetails = [
         abstract: "Cada año, la noche de San Marcos, Blue Sargent acompaña a su madre al camino de los espíritus para ver a los que morirán en los siguientes doce meses. Sin embargo, este año es distinto: Blue, la única de su familia que no tiene facultades adivinatorias, ha visto a uno de estos espíritus, y eso solo puede significar que es su amor verdadero o que lo va a matar. Él se llama Gansey y es el estudiante más rico del colegio privado más elitista de la zona, la Academia Aglionby, cuyo emblema es un cuervo que todos los estudiantes llevan bordado en el jersey. Junto a Adam, un estudiante brillante, celoso del poder económico de sus compañeros; Ronan, un chico con problemas emocionales desde la muerte de su padre, y Noah, el observador taciturno que apenas habla, forman los chicos del cuervo, y están empeñados en descubrir la ubicación de la tumba del último rey galés, Glendower, el Rey Cuervo.",
         "stock": 9,
         "category": "Scholastic"
+    },
+
+    {
+        "id": "6",
+        "title": "Wolfsong",
+        "author": "T. J. Klune",
+        "price": 950,
+        "img": 'https://images-na.ssl-images-amazon.com/images/I/5138BZ2X7UL._SX332_BO1,204,203,200_.jpg',
+        "language": "Inglés",
+        "publisher": "Tor Books",
+        "year": 2016,
+        "pages": 495,
+        abstract: "Ox nunca tuvo a nadie, hasta que un extraño chico le tendió la mano y lo condujo a un mundo donde lo maravilloso es posible. Le dio un hogar. Una familia. Una manada. Pero allí donde vive lo increíble también lo hacen las pesadillas. Y aunque Ox es solo un humano, muy pronto deberá alzar su aullido y pelear con uñas y dientes por quienes ama.",
+        "stock": 15,
+        "category": "Tor-Books"  
+    },
+
+    {
+        "id": "7",
+        "title": "The Way of Kings",
+        "author": "Brandon Sanderson",
+        "price": 2000,
+        "img": 'https://images-na.ssl-images-amazon.com/images/I/51ttJEFwlNL._SX305_BO1,204,203,200_.jpg',
+        "language": "Inglés",
+        "publisher": "Tor Books",
+        "year": 2011,
+        "pages": 1116,
+        abstract: "En Roshar, un mundo de piedra y tormentas, extrañas tempestades de increíble potencia barren el rocoso territorio de tal manera que han dado forma a una nueva civilización escondida. Han pasado siglos desde la caída de las diez órdenes consagradas conocidas como los Caballeros Radiantes, pero sus espadas y armaduras aún permanecen. En las Llanuras Quebradas se libra una guerra sin sentido. Kaladin ha sido sometido a la esclavitud, mientras diez ejércitos luchan por separado contra un solo enemigo. El comandante de uno de los otros ejércitos, el señor Dalinar, se siente fascinado por un antiguo texto llamado 'El camino de los reyes'. Mientras tanto, al otro lado del océano, su eminente y hereje sobrina, Jasnah Kholin, forma a su discípula, la joven Shallan, quien investigará los secretos de los Caballeros Radiantes y la verdadera causa de la guerra.",
+        "stock": 20,
+        "category": "Tor-Books"  
     }
 ]
 
