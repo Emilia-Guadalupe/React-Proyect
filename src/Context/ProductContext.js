@@ -1,5 +1,6 @@
 import React, {createContext, useState, useEffect} from 'react';
-import { productDetails } from '../Components/ItemDetails/Item';
+//import { productDetails } from '../Components/ItemDetails/Item';
+import getFirestore from '../Firebase';
 
     //Se crea el Contexto:
     const ProductContext = createContext();
@@ -9,7 +10,7 @@ import { productDetails } from '../Components/ItemDetails/Item';
 function ProductContextProvider({children}) {
     const [product, setProduct] = useState([]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         setTimeout(() => {
             const promise = new Promise((resolve, reject) => {
                 resolve(productDetails);
@@ -18,9 +19,24 @@ function ProductContextProvider({children}) {
                 setProduct(productDetails);
             })
         }, 100);
-    },[])
+    },[])*/
 
     //Se llama a la constante CartContext y se le asigna un valor dentro de Provider. De esa manera, ese valor se puede llevar a todos los Componentes que lo necesiten. En este caso, se va a establecer a CartContextProvider como un elemento que va a englobar a toda la App, ya que lo usan Componentes de distintos niveles en la App y es útil que esté accesible para todos. 
+
+    useEffect(() => {
+        const db = getFirestore();
+
+        const ItemCollection = db.collection(" ItemCollection");
+        const query = ItemCollection.get();
+
+        query
+        .then((resultado) => {
+            setProduct(resultado.docs.map(doc => doc.data()));
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    },[product])
 
     return(
         <ProductContext.Provider value={product}>
