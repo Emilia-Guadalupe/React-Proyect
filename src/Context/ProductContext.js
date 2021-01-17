@@ -9,6 +9,8 @@ import getFirestore from '../Firebase';
 
 function ProductContextProvider({children}) {
     const [product, setProduct] = useState([]);
+    const [items, setItems] = useState([]);
+    const [itemId, setItemId] = useState();
 
     /*useEffect(() => {
         setTimeout(() => {
@@ -32,14 +34,32 @@ function ProductContextProvider({children}) {
         query
         .then((resultado) => {
             setProduct(resultado.docs.map(doc => doc.data()));
+            setItemId(resultado.docs.map(doc => doc.id));
         })
         .catch((error) => {
             console.log(error)
         })
-    },[product])
+
+    },[]);
+    
+    
+    useEffect(() => {
+        const db = getFirestore();
+
+        const ItemCollection = db.collection(" ItemCollection");
+        const highPrice = ItemCollection.where('category', '==', 'Tor-Books');
+
+        highPrice.get().then((resultado) => {
+            setItems(resultado.docs.map(doc => doc.data()));
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+    },[]);
 
     return(
-        <ProductContext.Provider value={product}>
+        <ProductContext.Provider value={{product, items}}>
             {children}
         </ProductContext.Provider>
     )
