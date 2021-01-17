@@ -10,7 +10,7 @@ function ItemDetail(){
     //const [item, setItem] = useState([]);
     
     //Remplazada por una constante que llama a un Context que contiene el llamado al array de productos:
-    const product = useContext(ProductContext);
+    const { product } = useContext(ProductContext);
 
     //useParams para llamar a un único item del array de productos, por el id:
     const {id} = useParams();

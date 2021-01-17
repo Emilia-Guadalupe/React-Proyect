@@ -8,13 +8,8 @@ import {Link} from 'react-router-dom';
 
 function ItemList(){
 
-    //const [product, setItem] = useState([]);
-    const product = useContext(ProductContext);
+    const { product } = useContext(ProductContext);
 
-//useEffect con un setTimeout, agregado para simular un retraso de 4 segundos en mostrar los productos
-//En resolve() se agrega lo que se quiere traer, en este caso, el array con los detalles de los productos. Una vez que eso está resuelto, en el .then se incluye setItem, para que la constante product tome el valor del array ItemDetails. Eso después se muestra en pantalla con un .map. 
-
-//Ver en ItemDetails los comentarios respecto a los cambios aplicados, reemplazando los useEffect por un useContext, guardando el llamado a productos directamente en un Context para su uso en distintos componentes. Se deja este useEffect, ya sin uso, de manera provisoria: 
 
     return(
         <>
