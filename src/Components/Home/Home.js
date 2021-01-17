@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import ProductContext from '../../Context/ProductContext';
 import BestBook from '../BestBook/BestBook';
 import Header from '../Header/Header';
 import SearchBar from '../SearchBar/SearchBar';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import ItemCount from '../ItemCount/ItemCount';
+import {Link} from 'react-router-dom';
+//import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import './Home.css';
 
 function Home(){
+
+    const { items } = useContext(ProductContext);
+
     return(
         <>
         <>
@@ -18,8 +24,35 @@ function Home(){
         <BestBook />
         </>
         <div id="books">
-        <h3 id="itemList">Nuestros libros:</h3>
-        <ItemListContainer />
+        <h3 id="itemList">Nuevos ingresos:</h3>
+        <div id="containerContainer">
+        {items.length === 0 ?
+            (
+                <>
+                <p> No tenemos libros </p>
+                </>
+                )
+            :items.map((e) => {
+                return(
+                    <div id="homeContainer" key={e.id}>
+                                <div id="home">
+                                <Link to={`/itemDetailContainer/${e.category}/${e.id}`}>
+                                <img id="portadaHome" src= {e.img} alt="Portada" />
+                                </Link>
+                                </div>
+                                <div>
+                                <h2 className="homeDescription">{e.title}</h2>
+                                <p className="homeDescription">{e.author}</p>
+                                <p className="homeDescription">${e.price}</p>
+                                </div>
+                                <div>
+                                <ItemCount details={{id: e.id, stock: e.stock, price: e.price, title: e.title}}/>
+                                </div>
+                        </div>
+                )
+            })
+            }
+        </div>    
         </div>
         </>
     )
