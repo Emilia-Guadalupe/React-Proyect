@@ -24,12 +24,12 @@ function Home(){
         <BestBook />
         </>
         <div id="books">
-        <h3 id="itemList">Nuevos ingresos:</h3>
+        <h3 className="itemList">Nuevos ingresos:</h3>
         <div id="containerContainer">
         {items.length === 0 ?
             (
                 <>
-                <p> No tenemos libros </p>
+                <p className="itemList"> Cargando libros... </p>
                 </>
                 )
             :items.map((e) => {

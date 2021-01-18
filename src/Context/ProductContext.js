@@ -10,7 +10,6 @@ import getFirestore from '../Firebase';
 function ProductContextProvider({children}) {
     const [product, setProduct] = useState([]);
     const [items, setItems] = useState([]);
-    const [itemId, setItemId] = useState();
 
     /*useEffect(() => {
         setTimeout(() => {
@@ -33,8 +32,11 @@ function ProductContextProvider({children}) {
 
         query
         .then((resultado) => {
-            setProduct(resultado.docs.map(doc => doc.data()));
-            setItemId(resultado.docs.map(doc => doc.id));
+            const data = resultado.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            setProduct(data);
         })
         .catch((error) => {
             console.log(error)
@@ -50,7 +52,11 @@ function ProductContextProvider({children}) {
         const highPrice = ItemCollection.where('category', '==', 'Tor-Books');
 
         highPrice.get().then((resultado) => {
-            setItems(resultado.docs.map(doc => doc.data()));
+            const data = resultado.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            setItems(data);
         })
         .catch((error) => {
             console.log(error)
