@@ -29,6 +29,7 @@ function ProductContextProvider({children}) {
 
         const ItemCollection = db.collection(" ItemCollection");
         const query = ItemCollection.get();
+        const highPrice = ItemCollection.where('category', '==', 'Tor-Books');
 
         query
         .then((resultado) => {
@@ -42,15 +43,6 @@ function ProductContextProvider({children}) {
             console.log(error)
         })
 
-    },[]);
-    
-    
-    useEffect(() => {
-        const db = getFirestore();
-
-        const ItemCollection = db.collection(" ItemCollection");
-        const highPrice = ItemCollection.where('category', '==', 'Tor-Books');
-
         highPrice.get().then((resultado) => {
             const data = resultado.docs.map((doc) => ({
                 id: doc.id,
@@ -63,6 +55,7 @@ function ProductContextProvider({children}) {
         })
 
     },[]);
+    
 
     return(
         <ProductContext.Provider value={{product, items}}>
