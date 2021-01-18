@@ -24,7 +24,7 @@ function Home(){
         <BestBook />
         </>
         <div id="books">
-        <h3 className="itemList">Nuevos ingresos:</h3>
+        <h3 className="itemList">Nuevos En La Nube:</h3>
         <div id="containerContainer">
         {items.length === 0 ?
             (
