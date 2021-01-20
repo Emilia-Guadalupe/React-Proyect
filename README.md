@@ -1,3 +1,22 @@
+--------
+
+Primer proyecto con React. 
+
+Es una librería online, que todavía se encuentra en desarrollo. 
+
+Proyecto desarrollado como parte del curso de React Js en Coderhouse. 
+
+--------
+
+First React proyect. 
+
+This is an online bookstore, still in development. 
+
+Coderhouse's React Js Course final proyect. 
+
+--------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
