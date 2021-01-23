@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import CartContext from '../../Context/CartContext';
+import CartForms from '../CartForms/CartForms';
 import {Link} from 'react-router-dom';
 import './cartStyles.css';
 
@@ -49,6 +50,9 @@ function CartContainer() {
             <p>Total Compra:</p>
             <p>${getGrandTotal()}</p>
         </div>
+        </div>
+        <div>
+            <CartForms />
         </div>
         </>
     )
