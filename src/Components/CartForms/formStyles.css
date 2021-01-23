@@ -1,0 +1,36 @@
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    width: 250px;
+    margin-top: 15px;
+}
+
+.datos {
+    padding: 7px;
+    margin-bottom: 7px;
+}
+
+.submitButton {
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid rgb(22, 81, 117);
+    background-color: rgb(22, 81, 117);
+    color: white;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    border: 1px solid  rgb(49, 148, 209);
+    color:  white;
+    background-color: rgb(75, 186, 255);
+}
