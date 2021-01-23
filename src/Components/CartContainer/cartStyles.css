@@ -5,7 +5,7 @@
 .titleContainer {
     display: grid;
     grid-template-columns: repeat(1, auto);
-    margin: 30px;
+    margin: 20px;
     font-family: 'Balsamiq Sans', cursive;
 }
 .CartContainer {
@@ -14,7 +14,7 @@
 }
 
 .totals {
-    margin: 30px;
+    margin: 20px;
     padding: 15px;
     font-family: 'Balsamiq Sans', cursive;
     font-size: 15px;
