@@ -12,10 +12,8 @@ function CartContextProvider({children}){
     const [phone, setPhone] = useState("");
     const [compra,setCompra] = useState("")
 
-    useEffect(() => {}, [])
+    //Funciones del Carrito de Compras 
 
-
-    //Funciones 
     const addProduct = (datos, number) => {
     
     const existing = products.find((p) => p.id === datos.id);
@@ -49,6 +47,8 @@ function CartContextProvider({children}){
         return products.reduce((total , p) => (total += p.price * p.number), 0);
     };
 
+    //Funciones para armar órdenes de compra en Firebase
+
     const manejarCompra = (e) => {
         e.preventDefault();
 
@@ -68,9 +68,11 @@ function CartContextProvider({children}){
         const db = getFirestore();
         const OrderCollection = db.collection("orders");
         OrderCollection.add(buyerData)
+
         .then((res) => {
             OrderCollection.doc(res.id)
             .get()
+            
             .then((querySnapshot) =>{
                 if(!querySnapshot.exists){
                     console.log("No existe")
@@ -81,7 +83,6 @@ function CartContextProvider({children}){
                     })
                 }
             })
-
             .catch(error => console.log(error))
         })
     }
