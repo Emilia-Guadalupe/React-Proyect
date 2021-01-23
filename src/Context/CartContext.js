@@ -1,10 +1,21 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState, useEffect} from 'react';
+import getFirestore from '../Firebase';
 
 const CartContext = createContext();
 
 function CartContextProvider({children}){
     const [products, setProducts] = useState([]);
 
+    //Elementos del comprador de la orden: 
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [compra,setCompra] = useState("")
+
+    useEffect(() => {}, [])
+
+
+    //Funciones 
     const addProduct = (datos, number) => {
     
     const existing = products.find((p) => p.id === datos.id);
@@ -38,8 +49,45 @@ function CartContextProvider({children}){
         return products.reduce((total , p) => (total += p.price * p.number), 0);
     };
 
+    const manejarCompra = (e) => {
+        e.preventDefault();
+
+        const buyerData = {
+            buyer : {
+                name, 
+                phone, 
+                email
+            }, 
+
+            items: products, 
+            total: getGrandTotal()
+        }
+
+        setCompra(buyerData);
+
+        const db = getFirestore();
+        const OrderCollection = db.collection("orders");
+        OrderCollection.add(buyerData)
+        .then((res) => {
+            OrderCollection.doc(res.id)
+            .get()
+            .then((querySnapshot) =>{
+                if(!querySnapshot.exists){
+                    console.log("No existe")
+                } else {
+                    setCompra({
+                        id: querySnapshot.id, 
+                        ...querySnapshot.data()
+                    })
+                }
+            })
+
+            .catch(error => console.log(error))
+        })
+    }
+
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal  }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, setPhone, setEmail, manejarCompra }}>
             {children}
         </CartContext.Provider>
     )
