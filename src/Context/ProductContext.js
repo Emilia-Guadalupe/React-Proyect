@@ -1,11 +1,8 @@
 import React, {createContext, useState, useEffect} from 'react';
-//import { productDetails } from '../Components/ItemDetails/Item';
 import getFirestore from '../Firebase';
 
     //Se crea el Contexto:
     const ProductContext = createContext();
-
-    //Función que le da su contenido al Contexto, en este caso es el Promise que llama al array de productos:
 
 function ProductContextProvider({children}) {
     const [product, setProduct] = useState([]);
@@ -63,8 +60,6 @@ function ProductContextProvider({children}) {
         </ProductContext.Provider>
     )
 }
-
-    //Se exporta la constante CartContext, para que pueda ser llamada por el useContext en los distintos Componentes y además se exporta la función interna CartContextProvider, que se va a llevar y llamar en App.js
 
 export default ProductContext;
 export {ProductContextProvider};
