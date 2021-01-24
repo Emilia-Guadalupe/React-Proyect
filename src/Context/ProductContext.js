@@ -1,5 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
-import getFirestore from '../Firebase';
+import getFirestore from '../FirebaseSettings';
 
     //Se crea el Contexto:
     const ProductContext = createContext();

@@ -1,5 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
-import getFirestore from '../Firebase';
+import getFirestore from '../FirebaseSettings';
 
 const CartContext = createContext();
 
@@ -88,7 +88,7 @@ function CartContextProvider({children}){
     }
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, setPhone, setEmail, manejarCompra }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, manejarCompra }}>
             {children}
         </CartContext.Provider>
     )
