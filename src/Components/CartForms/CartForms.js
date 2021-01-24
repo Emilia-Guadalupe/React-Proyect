@@ -4,7 +4,7 @@ import './formStyles.css';
 
 function CartForms() {
 
-    const { setName, setEmail, setPhone, manejarCompra } = useContext(CartContext);
+    const { setName, setEmail, setPhone, manejarCompra, name, email, phone } = useContext(CartContext);
 
     function onNameChange(evt) {
         setName(evt.target.value);
@@ -17,6 +17,7 @@ function CartForms() {
     function onPhoneChange(evt) {
     setPhone(evt.target.value);
     }
+
 
     return(
         <div className="formContainer">
@@ -38,7 +39,7 @@ function CartForms() {
                 <label id="number-label">Tu teléfono:</label>
                 <input  placeholder="Ingresá tu teléfono" required type="number" id="number" className="datos" onChange={evt => onPhoneChange(evt)}></input>
                 </>
-                <button type="submit" className="submitButton" onClick={manejarCompra}>Enviar</button>
+                <button type="submit" className="submitButton" onClick={manejarCompra} disabled={!(name !== "" && phone !== "" && email !== "")}>Enviar</button>
                 </form>
             </div>
         </div>
