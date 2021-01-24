@@ -13,7 +13,12 @@ function ItemList(){
 
     return(
         <>
-            {product.map((e) => {
+            {product.length === 0 ?
+                (
+                <>
+                <p className="loading"> Cargando libros... </p>
+                </>
+                ): product.map((e) => {
                 return(
                         <div key={e.id} id="itemContainer">
                                 <div id="book">
