@@ -10,11 +10,11 @@ function SearchBar(){
     return(
         <>
         <div className="searchContainer">
-        <ul>
+        <ul id="categoryDisplay">
         {categories.map(category =>{
             return(
-                <Link key={category.id} to={`/categories/${category.category}`}>
-                    {category.category}
+                <Link key={category.id} className="linkToCategory" to={`/categories/${category.category}`}>
+                    <li id="categoryLink">{category.category}</li>
                 </Link>
             )
         })}
