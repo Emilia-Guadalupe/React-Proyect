@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 import ItemDetail from './Components/ItemDetails/ItemDetail';
 import CartContainer from './Components/CartContainer/CartContainer';
+import Categories from './Components/Categories/Categories';
 import ItemList from './Components/ItemDetails/ItemList';
 import {ProductContextProvider} from './Context/ProductContext';
 import  {CartContextProvider} from './Context/CartContext';
@@ -36,8 +37,8 @@ function App() {
       <Route exact path="/ItemDetail">
       <ItemDetail />
       </Route>
-      <Route path="/ItemList/:category">
-      <ItemList />
+      <Route path="/categories/:category">
+      <Categories />
       </Route>
       <Route path="/about">
       <About />
