@@ -10,7 +10,6 @@ import ItemDetailContainer from './Components/ItemDetails/ItemDetailContainer';
 import ItemDetail from './Components/ItemDetails/ItemDetail';
 import CartContainer from './Components/CartContainer/CartContainer';
 import Categories from './Components/Categories/Categories';
-import ItemList from './Components/ItemDetails/ItemList';
 import {ProductContextProvider} from './Context/ProductContext';
 import  {CartContextProvider} from './Context/CartContext';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
