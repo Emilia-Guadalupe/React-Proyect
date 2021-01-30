@@ -7,6 +7,7 @@ import getFirestore from '../FirebaseSettings';
 function ProductContextProvider({children}) {
     const [product, setProduct] = useState([]);
     const [items, setItems] = useState([]);
+    const [categories, setCategories] = useState([]);
 
     /*useEffect(() => {
         setTimeout(() => {
@@ -24,9 +25,16 @@ function ProductContextProvider({children}) {
     useEffect(() => {
         const db = getFirestore();
 
+        //Llamar a toda la base de datos
         const ItemCollection = db.collection(" ItemCollection");
         const query = ItemCollection.get();
-        const highPrice = ItemCollection.where('category', '==', 'Tor-Books');
+
+        //Llamar a la base de datos con un filtro
+        const selectedCategory = ItemCollection.where('category', '==', 'Tor-Books');
+
+        //Llamar a la base de datos de categorías
+        const categoryCollection = db.collection("categories");
+        const ask = categoryCollection.get();
 
         query
         .then((resultado) => {
@@ -40,7 +48,7 @@ function ProductContextProvider({children}) {
             console.log(error)
         })
 
-        highPrice.get().then((resultado) => {
+        selectedCategory.get().then((resultado) => {
             const data = resultado.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data()
@@ -51,11 +59,23 @@ function ProductContextProvider({children}) {
             console.log(error)
         })
 
+        ask
+        .then((resultado) => {
+            const data = resultado.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            setCategories(data);
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
     },[]);
     
 
     return(
-        <ProductContext.Provider value={{product, items}}>
+        <ProductContext.Provider value={{product, items, categories}}>
             {children}
         </ProductContext.Provider>
     )
