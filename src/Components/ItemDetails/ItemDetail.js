@@ -5,9 +5,6 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail(){
-    //Constante con la que se llamaba al array de productos al componente: 
-
-    //const [item, setItem] = useState([]);
     
     //Remplazada por una constante que llama a un Context que contiene el llamado al array de productos:
     const { product } = useContext(ProductContext);
