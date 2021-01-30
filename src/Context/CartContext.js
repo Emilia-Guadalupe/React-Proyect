@@ -1,4 +1,4 @@
-import React, {createContext, useState, useEffect} from 'react';
+import React, {createContext, useState} from 'react';
 import getFirestore from '../FirebaseSettings';
 
 const CartContext = createContext();
@@ -10,7 +10,9 @@ function CartContextProvider({children}){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [compra,setCompra] = useState("")
+    const [compra,setCompra] = useState("");
+    const [thanks, setThanks] = useState("");
+
 
     //Funciones del Carrito de Compras 
 
@@ -85,10 +87,11 @@ function CartContextProvider({children}){
             })
             .catch(error => console.log(error))
         })
+        setThanks(`¡Gracias por tu compra, ${name}!`)
     }
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, manejarCompra }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, manejarCompra, compra, thanks }}>
             {children}
         </CartContext.Provider>
     )
