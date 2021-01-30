@@ -9,6 +9,7 @@ function CartContextProvider({children}){
     //Elementos del comprador de la orden: 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [confirmEmail, setConfirmEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [compra,setCompra] = useState("");
     const [thanks, setThanks] = useState("");
@@ -58,7 +59,8 @@ function CartContextProvider({children}){
             buyer : {
                 name, 
                 phone, 
-                email
+                email, 
+                confirmEmail
             }, 
 
             items: products, 
@@ -87,11 +89,11 @@ function CartContextProvider({children}){
             })
             .catch(error => console.log(error))
         })
-        setThanks(`¡Gracias por tu compra, ${name}!`)
+        setThanks(`¡Gracias por tu compra, ${name}! El ID de tu orden es: ${compra.id}`)
     }
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, manejarCompra, compra, thanks }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, setConfirmEmail, confirmEmail, manejarCompra, compra, thanks }}>
             {children}
         </CartContext.Provider>
     )
