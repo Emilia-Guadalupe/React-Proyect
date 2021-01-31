@@ -15,6 +15,10 @@ function Categories(){
     //Se mapean los productos del array, llamados desde el CartContext:
 
     return(
+        <>
+        <div>
+            <h2 id="categoryTitle">Libros por categoría</h2>
+        </div>
         <div id="biggerContainer">
         {product.length === 0 ?
             (<p id="loadingCategories">Cargando categoría...</p>)
@@ -42,6 +46,7 @@ function Categories(){
             })
             }
         </div>
+        </>
         )
 }
 
