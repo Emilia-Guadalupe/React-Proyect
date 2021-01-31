@@ -89,7 +89,6 @@ function CartContextProvider({children}){
             })
             .catch(error => console.log(error))
         })
-        setThanks(`¡Gracias por tu compra, ${name}! El ID de tu orden es: ${compra.id}`)
     }
 
     return(
