@@ -12,14 +12,73 @@ This is an online bookstore, Coderhouse's React Js Course final proyect.
 
 --------
 
-# Want to see this proyect working? Clone this repository and install this dependencies to get started: 
+# Para hacer funcionar este proyecto, se instalaron estas dependencias: 
 
 -npm modules
 -firebase: 8.2.3
 -react-router-dom: 5.2.0
 -dotenv: 8.2.0
 
-# Getting Started with Create React App
+## Recorrido inicial del proyecto
+
+En la Home, o Página Principal, vas a poder visualizar el libro recomendado del mes y una selección de "nuevos libros" de la librería En La Nube.
+
+Desde la barra de navegación vas a poder acceder a la sección "Sobre nosotros" (about) y la sección Consultas. Además, en la barra de navegación podés acceder a la pestaña Libros, que contiene todos los libros de la librería. A su vez, el Carrito de Compras está accesible desde la barra de navegación, haciendo click en la imagen del carrito. 
+
+Tanto desde la Home, como desde la sección Libros, podés filtrar los libros por categoría. En este caso, las categorías son las editoriales. Para eso está disponible la barra de filtros con los nombres de las mismas.
+
+Se puede acceder al detalle de cada producto, haciendo click en las portadas de los libros.
+
+## Estructura del producto
+
+Podés cargar productos al Carrito de Compras desde cualquier sección de la página. Cada producto que se puede agregar contiene: 
+
+-Una imagen del libro
+-Un contador, con el que se puede seleccionar cuántas unidades del producto se quiere agregar
+-Un botón de "Agregar al Carrito" que, al hacer click, se modifica al botón "Terminar Compra". Esto permite acceder rápidamente al carrito desde el mismo botón con el que se agregó el producto, haciendo click nuevamente. 
+-Un link al detalle del producto, con más información y un breve resumen del libro, al que se accede haciendo click en la imagen del producto. 
+
+## Estructura del Carrito de Compras
+
+En el Carrito de Compras se puede visualizar el listado de productos agregados. El detalle consta de: nombre del libro, id, precio por unidad y precio total, multiplicando cantidad de libros seleccionados, por el precio por unidad. 
+
+Los productos se pueden eliminar del carrito haciendo click en la "X" o borrar la totalidad del carrito. En ambos casos, el total que se muestra en el carrito se actualizará automáticamente. 
+
+## Terminar Compra
+
+Para finalizar la compra, se debe completar el formulario incluido en la parte inferior del Carrito con los datos solicitados. 
+
+Al hacer click en el botón del formulario, la orden se creará automáticamente en Firebase, con los datos de la compra del usuario y sus datos de contacto ingresados en el formulario. 
+
+A su vez, se generará un aviso en la página, confirmando que los datos fueron enviados y brindando al usuario el número de orden, que corresponde con el ID generado por Firebase.
+
+## Firebase 
+
+Para la estructura backend de este proyecto se utilizó Firebase. 
+
+Se crearon tres Colecciones: 
+
+-ItemCollection: contiene los datos de los libros que se muestran en la página (título, autor, editorial, precio, año de publicación, cantidad de páginas e imagen del libro)
+
+-Orders: contiene todas las órdenes generadas por los usuarios al finalizar compra. 
+
+-Categories: contiene las categorías utilizadas para armar la barra de filtros por editorial. 
+
+## React-Router
+
+Para poder crear las rutas de la página web, se usó React-router-dom. 
+
+## Context
+
+Este proyecto contiene dos grandes Contextos: Product Context y Cart Context. El primero se encarga del llamado a las colecciones ItemCollection y Categories, para mostrar los productos y las categorías que dan forma a la página web.  
+
+CartContext contiene las funcionalidades de la sección del Carrito de Compras y del Formulario para terminar la compra. 
+
+## .Env.Local
+
+Para resguardar las claves de Firebase, se generó un archivo .env.local, no incluido en este repositorio de Github, que contiene las claves. 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
