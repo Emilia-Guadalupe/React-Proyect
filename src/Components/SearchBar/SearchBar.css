@@ -1,3 +1,7 @@
+.searchContainer {
+    width: 100%;
+}
+
 #categoryDisplay {
     background-color: rgb(23, 52, 114);
     border-bottom:  rgb(20, 36, 71);
@@ -6,12 +10,11 @@
 #categoryDisplay {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    grid-gap: 1rem;
     list-style: none;
     text-align: center;
-    width: 100vw;
     justify-content: center;
-    padding: 7px;
+    padding: 0.5rem;
 }
 
 .linkToCategory {
@@ -22,7 +25,7 @@
     color: rgb(52, 92, 179);
     font-family: 'Balsamiq Sans', cursive;
     border: 2px solid whitesmoke;
-    padding: 10px;
+    padding: 0.5rem;
     border-radius: 10px;
     background-color: white;
 }

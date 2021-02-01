@@ -1,6 +1,6 @@
 .NavBarItems {
     background-color: rgb(49, 148, 209);
-    height: 80px;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +11,9 @@
 .navbar-logo {
     color: white; 
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 2rem;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 #cartWidget {
@@ -25,14 +25,14 @@
 }
 
 .fa-cloud {
-    margin-left: 10px;
-    padding: 10px;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
 }
 
 .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    grid-gap: 0.5rem;
     list-style: none;
     text-align: center;
     width: 70vw;
@@ -43,13 +43,13 @@
 .nav-links {
     color: white;
     text-decoration: none;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .nav-links:hover {
     background-color: turquoise;
-    border-radius: 4px;
+    border-radius: 5%;
 }

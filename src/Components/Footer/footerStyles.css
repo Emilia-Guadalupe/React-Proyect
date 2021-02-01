@@ -1,13 +1,14 @@
 footer {
-    height: 30px;
+    height: 2.5rem;
+    width: 100%;
     background-color: rgb(49, 148, 209);
     border-top: 1px solid rgb(22, 81, 117);
-    margin: 0px;
-    padding: 0px;
+    display: flex;
+    align-items: center;
 }
 
 .cierre {
     color: white;
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding-left: 1rem;
 }

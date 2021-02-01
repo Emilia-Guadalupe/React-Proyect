@@ -1,33 +1,33 @@
 #itemDetailContainer {
     display: flex;    
-    margin: 30px;
+    margin: 2rem;
 }
 
 .wholeContainer {
-    height: 700px;
-    margin: 50px;
+    height: 100%;
+    margin: 3rem;
 }
 
 #abstractTitle {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
 #abstractText {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.5rem;
     text-align: justify;
 }
 
 #bookPart {
-    padding: 10px;
-    margin: 15px;
+    padding: 0.5rem;
+    margin: 1rem;
     justify-content: start;
 }
 
 #content {
-    padding: 10px;
-    margin: 15px;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 #bookContainer {
@@ -36,13 +36,13 @@
 }
 
 #bookCover {
-    height: 200px;
-    border-radius: 5px;
-    margin: 10px;
+    height: 12rem;
+    border-radius: 7%;
+    margin: 0.5rem;
 }
 
 .details {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.3rem;
     text-align: center;
 }

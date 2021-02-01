@@ -6,12 +6,13 @@
     color: white;
     text-decoration: none;
     list-style: none;
+    margin-right: 0.5rem;
 }
 
 .fa-shopping-cart {
     color: white;
-    font-size: 17px;
-    padding-right: 7px;
+    font-size: 1.1rem;
+    padding-right: 0.5rem;
 }
 
 .fa-shopping-cart:hover {

@@ -6,18 +6,18 @@
 #recomendation {
     text-align: center;
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
-    margin: 20px;
+    padding: 0.4rem;
+    margin: 1.5rem;
 }
 
 #bookDetails {
-    padding: 10px;
-    margin: 15px;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 #contentBook {
-    padding: 10px;
-    margin: 15px;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 #photoContainer {
@@ -26,12 +26,12 @@
 }
 
 #bookCoverPhoto {
-    height: 200px;
-    border-radius: 5px;
+    height: 13rem;
+    border-radius: 5%;
 }
 
 .information {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.3rem;
     text-align: center;
 }

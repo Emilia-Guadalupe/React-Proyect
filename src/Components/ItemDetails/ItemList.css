@@ -4,19 +4,19 @@
 }
 
 #portada {
-    height: 200px;
-    border-radius: 5px;
-    margin: 10px;
+    height: 12rem;
+    border-radius: 7%;
+    margin: 1rem;
 }
 
 .description {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.3rem;
     text-align: center;
 }
 
 .loading {
     font-family: 'Balsamiq Sans', cursive;
-    padding: 5px;
+    padding: 0.3rem;
     text-align: center;
 }

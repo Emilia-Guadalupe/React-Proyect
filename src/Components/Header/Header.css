@@ -1,24 +1,23 @@
 #presentacion {
     width: 100%; 
-    border-bottom: 1px solid rgb(22, 81, 119);
-    padding-bottom: 100px;
+    border-bottom: 0.2rem solid rgb(22, 81, 119);
+    padding-bottom: 3rem;
     background: rgb(22, 81, 117);
     color: white;
 }
 
 #libreria {
     text-align: center;
-    font-size: 50px;
-    margin-top: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top: 100px; 
+    font-size: 3rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5rem; 
     font-family: 'Balsamiq Sans', cursive;
 }
 
 #subtitulo { 
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
+    padding: 1.5%;
+    font-size: 1.3rem;
     font-family: 'Balsamiq Sans', cursive;
 }
