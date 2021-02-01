@@ -2,20 +2,22 @@
 
 Primer proyecto con React. 
 
-Es una librería online, que todavía se encuentra en desarrollo. 
-
 Proyecto desarrollado como parte del curso de React Js en Coderhouse. 
 
 --------
 
 First React proyect. 
 
-This is an online bookstore, still in development. 
-
-Coderhouse's React Js Course final proyect. 
+This is an online bookstore, Coderhouse's React Js Course final proyect. 
 
 --------
 
+# Want to see this proyect working? Clone this repository and install this dependencies to get started: 
+
+-npm modules
+-firebase: 8.2.3
+-react-router-dom: 5.2.0
+-dotenv: 8.2.0
 
 # Getting Started with Create React App
 
