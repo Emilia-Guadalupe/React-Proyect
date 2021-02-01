@@ -1,9 +1,12 @@
 import React, {createContext, useState} from 'react';
 import getFirestore from '../FirebaseSettings';
+import firebase from "firebase/app";
 
 const CartContext = createContext();
 
 function CartContextProvider({children}){
+
+    //Llamado al Context de productos: 
     const [products, setProducts] = useState([]);
 
     //Elementos del comprador de la orden: 
@@ -12,10 +15,11 @@ function CartContextProvider({children}){
     const [confirmEmail, setConfirmEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [compra,setCompra] = useState("");
-    const [thanks, setThanks] = useState("");
-
 
     //Funciones del Carrito de Compras 
+
+
+    //Agregar productos al carrito de compras: 
 
     const addProduct = (datos, number) => {
     
@@ -30,6 +34,8 @@ function CartContextProvider({children}){
         }
     };
 
+    //Borrar productos del carrito al hacer click en "X"
+
     const delProduct = (id) => {
         products.splice(
         products.findIndex((p) => p.id === id),
@@ -41,6 +47,8 @@ function CartContextProvider({children}){
     const clearCart = () => {
         setProducts([]);
     }
+
+    //Suma de total de productos y costo total
 
     const productsCount = () => {
         return products.reduce((total, p) => (total += p.number), 0);
@@ -55,6 +63,8 @@ function CartContextProvider({children}){
     const manejarCompra = (e) => {
         e.preventDefault();
 
+        const date = firebase.firestore.Timestamp.fromDate(new Date())
+
         const buyerData = {
             buyer : {
                 name, 
@@ -64,6 +74,7 @@ function CartContextProvider({children}){
             }, 
 
             items: products, 
+            date: date.toDate(),
             total: getGrandTotal()
         }
 
@@ -92,7 +103,7 @@ function CartContextProvider({children}){
     }
 
     return(
-        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, setConfirmEmail, confirmEmail, manejarCompra, compra, thanks }}>
+        <CartContext.Provider value={{ products, addProduct, delProduct, clearCart, productsCount, getGrandTotal, setName, name, setPhone, phone, email, setEmail, setConfirmEmail, confirmEmail, manejarCompra, compra }}>
             {children}
         </CartContext.Provider>
     )
