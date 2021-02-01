@@ -22,7 +22,7 @@ function CartContainer() {
             </Link>
             <button className="cartButton" onClick={clearCart}>Borrar todo</button>
         </div>
-        <div className="titleContainer"><h3>Tu carrito de Compras</h3></div>
+        <div className="titleCartContainer"><h3>Tu carrito de Compras</h3></div>
         {products.length === 0 ?
             (
                 <>
@@ -59,22 +59,3 @@ function CartContainer() {
 }
 
 export default CartContainer; 
-
-/* 
-<div>
-            <div>
-                <h3>¡Gracias por tu compra {compra.buyer.name}!</h3>
-            </div>
-            <div>
-                {compra.items.map(item => {
-                    return(
-                        <div key={item.id}>
-                            <p>{item.item.title}</p>
-                            <p>{item.item.number}</p>
-                            <p>${item.total}</p>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
-*/

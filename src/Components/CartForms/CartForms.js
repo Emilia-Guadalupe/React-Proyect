@@ -49,14 +49,16 @@ function CartForms() {
                 <button type="submit" className="submitButton" disabled={!(name !== "" && phone !== "" && email !== "" && confirmEmail !== "")}>Enviar</button>
                 </form>
             </div>
-            <div>
+            <div id="confirmationText">
                 {compra ? (
                     <>
+                    <div>
                     <p>
                     ¡Muchas gracias, {compra.buyer.name}! 
                     </p>
                     <p>El id de tu compra es: {compra.id}</p>
                     <p>Total de tu compra: ${compra.total}</p>
+                    </div>
                     </>
                 ) : null }
             </div>

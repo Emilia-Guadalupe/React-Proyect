@@ -49,8 +49,8 @@ function add(){
         </div>
         <div id="secondContainer">
     { showing
-    ? <Link to="/carrito"><button className="cart">Terminar Compra</button></Link>
-    : <button className="cart" onClick={add}>Agregar al Carrito</button>
+    ? <Link to="/carrito"><button className="toCart">Terminar Compra</button></Link>
+    : <button className="toCart" onClick={add}>Agregar al Carrito</button>
     }
         </div>
         <div className="empty">{empty}</div>
