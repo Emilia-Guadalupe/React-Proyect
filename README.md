@@ -78,6 +78,8 @@ CartContext contiene las funcionalidades de la sección del Carrito de Compras y
 
 Para resguardar las claves de Firebase, se generó un archivo .env.local, no incluido en este repositorio de Github, que contiene las claves. 
 
+----------------------
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
