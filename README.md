@@ -4,11 +4,15 @@ Primer proyecto con React.
 
 Proyecto desarrollado como parte del curso de React Js en Coderhouse. 
 
+Link a la página del proyecto (subido en Netlify): https://wonderful-snyder-c0c791.netlify.app 
+
 --------
 
 First React proyect. 
 
 This is an online bookstore, Coderhouse's React Js Course final proyect. 
+
+Link to website: https://wonderful-snyder-c0c791.netlify.app
 
 --------
 
